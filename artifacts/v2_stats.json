@@ -1,0 +1,201 @@
+{
+ "n_tasks": 253,
+ "n_pairs": 506,
+ "ts": {
+  "b_abl_better": 5,
+  "c_full_better": 8,
+  "p_mcnemar": 0.5811,
+  "rate_full": 0.9862,
+  "rate_abl": 0.9802
+ },
+ "tsa": {
+  "b_abl_better": 5,
+  "c_full_better": 2,
+  "p_mcnemar": 0.4531,
+  "rate_full": 0.9763,
+  "rate_abl": 0.9822
+ },
+ "af1_diff": {
+  "mean": 0.001,
+  "ci95": [
+   -0.0102,
+   0.0122
+  ]
+ },
+ "ts_rate_diff": {
+  "mean": 0.0059,
+  "ci95": [
+   -0.0079,
+   0.0198
+  ]
+ },
+ "tsa_rate_diff": {
+  "mean": -0.0059,
+  "ci95": [
+   -0.0158,
+   0.004
+  ]
+ },
+ "power": {
+  "discordant_pairs": 7,
+  "discordance_rate": 0.0138,
+  "theta_obs": 0.286,
+  "power_by_theta": {
+   "0.55": 0.019,
+   "0.60": 0.03,
+   "0.65": 0.05,
+   "0.70": 0.083
+  },
+  "equiv_delta_tsa": {
+   "0.60": 0.0028,
+   "0.65": 0.0042,
+   "0.70": 0.0055
+  },
+  "theta_for_80power": null
+ },
+ "arms": {
+  "full": {
+   "ts": 0.9862,
+   "tsa": 0.9763,
+   "af1": 0.9,
+   "e2e_med_ms": 2812,
+   "cls": {
+    "asset": 1.0,
+    "cross": 0.9,
+    "disp": 0.9868,
+    "logs": 0.9706,
+    "org": 1.0,
+    "proj": 1.0,
+    "stats": 1.0
+   }
+  },
+  "ablated": {
+   "ts": 0.9802,
+   "tsa": 0.9822,
+   "af1": 0.899,
+   "e2e_med_ms": 2593,
+   "cls": {
+    "asset": 0.9891,
+    "cross": 0.8667,
+    "disp": 1.0,
+    "logs": 0.9608,
+    "org": 1.0,
+    "proj": 1.0,
+    "stats": 1.0
+   }
+  },
+  "bare": {
+   "ts": 0.413,
+   "tsa": 0.0,
+   "af1": 0.0,
+   "e2e_med_ms": 2148,
+   "cls": {
+    "asset": 0.413,
+    "cross": 0.3333,
+    "disp": 0.1316,
+    "logs": 0.4706,
+    "org": 0.5208,
+    "proj": 1.0,
+    "stats": 0.4348
+   }
+  }
+ },
+ "latency_full_p1": {
+  "calls": 694,
+  "p50": 59,
+  "p95": 803,
+  "max": 6616,
+  "sum_s": 120.6,
+  "e2e_p95": 20155
+ },
+ "latency_abl_p1": {
+  "calls": 645,
+  "p50": 55
+ },
+ "miss_pairs_top": [
+  [
+   [
+    "get_department_statistics_report",
+    "query_departments"
+   ],
+   4
+  ],
+  [
+   [
+    "add_black_dns",
+    "query_black_dns"
+   ],
+   3
+  ]
+ ],
+ "n_miss_p1": 7,
+ "r1_reattempt": {
+  "events": 21,
+  "recovered": 20,
+  "tasks_sample": [
+   "A71",
+   "A74",
+   "L118",
+   "L121",
+   "L149",
+   "L150",
+   "L151",
+   "L153",
+   "L154",
+   "L155"
+  ]
+ },
+ "declared_truncation": 11,
+ "bare_success": {
+  "n": 103,
+  "with_ledger_fact": 1,
+  "grounded_tasks": [
+   "O101"
+  ],
+  "no_discriminating_tokens": 21,
+  "artifact_rate": 0.9903
+ },
+ "write_intercepts_p1": 9,
+ "pass_stability": {
+  "full": 5,
+  "full_tasks": [
+   "L152",
+   "L154",
+   "L155",
+   "T183",
+   "X247"
+  ],
+  "ablated": 6,
+  "ablated_tasks": [
+   "A26",
+   "A69",
+   "L147",
+   "L150",
+   "X246",
+   "X247"
+  ],
+  "bare": 29,
+  "bare_tasks": [
+   "A48",
+   "A55",
+   "A61",
+   "A64",
+   "A66",
+   "A81",
+   "O94",
+   "O101",
+   "O111",
+   "L126",
+   "L130",
+   "L133",
+   "L134",
+   "L150",
+   "L151"
+  ]
+ },
+ "calls_full_p1": {
+  "total": 703,
+  "median": 1,
+  "six_step_cap": 29
+ }
+}

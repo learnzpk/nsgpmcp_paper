@@ -1,0 +1,423 @@
+[
+ {
+  "id": "A1",
+  "class": "asset",
+  "query": "What system runs on ***.edu.cn and which unit owns it?",
+  "query_zh": "***.edu.cn 是什么系统，归哪个单位管？",
+  "gold_tool": "search_assets",
+  "gold_args": {
+   "keyword": "***.edu.cn"
+  },
+  "required_all": [
+   "INFO_*****",
+   "***"
+  ],
+  "_ref": "{\n  \"keyword\": \"***.edu.cn\",\n  \"field\": \"auto\",\n  \"status\": null,\n  \"信息资产\": {\n    \"total\": 1,\n    \"page\": 1,\n    \"page_size\": 10,\n    \"results\": [\n      {\n        \"id\": \"INFO_*****\",\n        \"name\": \"AI智能体搭建平台\",\n        \"typo\": \"信息系统\",\n        \"department\": \"***\",\n        \"administrator\": \"***\",\n        \"ip\": \"172.20.*.*\",\n        \"domainname\": \"***.edu.cn\",\n        \"url\": \"https://***.edu.cn\",\n        \"status\": \"上线\",\n        \"out_is_allow\": \"是\",\n        \"protection_level\": \"一级\",\n        \"is_report\": \"已上报\",\n        \"is_available\": \"不可用\",\n        \"域名解析情况\": {\n          \"***.edu.cn\": [\n            {\n              \"视图\": \"CMCC\",\n              \"解析\": \"CNAME记录：***.edu.cn.\"\n            },\n            {\n              \"视图\": \"EDU\",\n              \"解析\": \"CNAME记录：***.edu.cn.\"\n            },\n            {\n              \"视图\": \"LAN\",\n              \"解析\": \"CNAME记录：***.edu.cn.\"\n            },\n            {\n              \"视图\": \"TEL\",\n              \"解析\": \"CNAME记录：***.edu.cn.\"\n            }\n          ]\n        }\n      }\n    ]\n  },\n  \"硬件资产\": {\n    \"total\": 0,\n    \"page\": 1,\n    \"page_size\": 10,\n    \"results\": []\n  }\n}"
+ },
+ {
+  "id": "A2",
+  "class": "asset",
+  "query": "Find the graduation-project (thesis) management system: its ID, owning department and access URL.",
+  "query_zh": "***：编号、归属部门、访问地址。",
+  "gold_tool": "search_assets",
+  "gold_args": {
+   "keyword": "***"
+  },
+  "required_all": [
+   "INFO_*****",
+   "***",
+   "***.edu.cn"
+  ],
+  "_ref": "{\n  \"keyword\": \"***\",\n  \"field\": \"auto\",\n  \"status\": null,\n  \"信息资产\": {\n    \"total\": 1,\n    \"page\": 1,\n    \"page_size\": 10,\n    \"results\": [\n      {\n        \"id\": \"INFO_*****\",\n        \"name\": \"***（论文）***\",\n        \"typo\": \"信息系统\",\n        \"department\": \"***\",\n        \"administrator\": \"***\",\n        \"ip\": \"202.195.*.*\",\n        \"domainname\": \"***.edu.cn\",\n        \"url\": \"http://***.edu.cn\",\n        \"status\": \"上线\",\n        \"out_is_allow\": \"否\",\n        \"protection_level\": \"二级\",\n        \"is_report\": \"已上报\",\n        \"is_available\": \"可用\",\n        \"域名解析情况\": {\n          \"***.edu.cn\": [\n            {\n              \"视图\": \"CMCC\",\n              \"解析\": \"CNAME记录：***.edu.cn.\"\n            },\n            {\n              \"视图\": \"EDU\",\n              \"解析\": \"CNAME记录：***.edu.cn.\"\n            },\n            {\n              \"视图\": \"LAN\",\n              \"解析\": \"CNAME记录：***.edu.cn.\"\n            },\n            {\n              \"视图\": \"TEL\",\n              \"解析\": \"CNAME记录：***.edu.cn.\"\n            }\n          ]\n        }\n      }\n    ]\n  },\n  \"硬件资产\": {\n    \"total\": 0,\n    \"page\": 1,\n    \"page_size\": 10,\n    \"results\": []\n  }\n}"
+ },
+ {
+  "id": "A3",
+  "class": "asset",
+  "query": "Show the security profile of asset INFO_***** (bulletin/remediation records and exposure policy).",
+  "query_zh": "看 INFO_***** 的安全画像：通报整改记录和开放策略。",
+  "gold_tool": "get_asset_security",
+  "gold_args": {
+   "asset_id": "INFO_*****"
+  },
+  "required_any": [
+   "通报",
+   "整改",
+   "开放",
+   "记录"
+  ],
+  "_ref": "{\n  \"资产类别\": \"信息资产\",\n  \"资产\": {\n    \"id\": \"INFO_*****\",\n    \"name\": \"***（论文）***\",\n    \"department\": \"***\",\n    \"administrator\": \"***\",\n    \"ip\": \"202.195.*.*\",\n    \"domainname\": \"***.edu.cn\",\n    \"url\": \"http://***.edu.cn\",\n    \"status\": \"上线\"\n  },\n  \"开放策略\": {\n    \"校外开放\": \"否\",\n    \"单双非标志\": \"***\",\n    \"重保策略名称\": \"\",\n    \"反代路径策略\": [\n      {\n        \"域名\": \"***.edu.cn\",\n        \"业务地址\": \"202.195.*.*:80\",\n        \"走校外反代\": true,\n        \"走校内反代\": true,\n        \"路径\": \"/\",\n        \"校外可访问\": false,\n        \"校内可访问\": true,\n        \"是否HTTPS\": false,\n        \"策略开始\": \"2022-03-10 15:50:00\",\n        \"策略结束\": \"2082-03-10 15:50:00\",\n        \"重保策略标志\": \"\",\n        \"重保策略状态\": \"\",\n        \"备注\": \"\"\n      },\n      {\n        \"域名\": \"***.edu.cn\",\n        \"业务地址\": \"202.195.*.*:80\",\n        \"走校外反代\": true,\n        \"走校内反代\": true,\n        \"路径\": \"/bysj1\",\n        \"校外可访问\": false,\n        \"校内可访问\": true,\n        \"是否HTTPS\": false,\n        \"策略开始\": \"2026-06-28 06:35:00\",\n        \"策略结束\": \"2086-06-28 06:35:00\",\n        \"重保策略标志\": \"\",\n        \"重保策略状态\": \"\",\n        \"备注\": \"\"\n      },\n      {\n        \"域名\": \"***.edu.cn\",\n        \"业务地址\": \"202.195.*.*:80\",\n        \"走校外反代\": true,\n        \"走校内反代\": true,\n        \"路径\": \"/bysj2/Backstage.aspx\",\n        \"校外可访问\": false,\n        \"校内可访问\": true,\n        \"是否HTTPS\": false,\n        \"策略开始\": \"2026-06-29 22:47:00\",\n        \"策略结束\": \"2086-06-29 22:47:00\",\n        \"重保策略标志\": \"\",\n        \"重保策略状态\": \"\",\n        \"备注\": \"\"\n      }\n    ],\n    \"重保限制策略\": [\n      {\n        \"id\": \"POLICE_*****\",\n        \"名称\": \"2021春节假期重要重保策略\",\n        \"动作\": \"close\",\n        \"策略状态\": \"已完成\",\n        \"开始时间\": \"2021-02-10 16:00:00\",\n        \"结束时间\": \"2021-02-17 23:00:00\",\n        \"周列表\": [\n          0,\n          1,\n          2,\n          3,\n          4,\n          5,\n          6\n        ],\n        \"时间段列表\": [\n          [\n            \"00:00:00\",\n            \"23:59:59\"\n          ]\n        ],\n        \"备注\": \"\"\n      },\n      {\n        \"id\": \"POLICE_*****\",\n        \"名称\": \"2021年五一重保_一般策略\",\n        \"动作\": \"close\",\n        \"策略状态\": \"已完成\",\n        \"开始时间\": \"2021-04-30 00:00:00\",\n        \"结束时间\": \"2021-05-05 23:00:00\",\n        \"周列表\": [\n          0,\n          1,\n          2,\n          3,\n          4,\n          5,\n          6\n        ],\n        \"时间段列表\": [\n          [\n            \"00:00:00\",\n            \"06:00:00\"\n          ],\n          [\n            \"23:30:00\",\n            \"23:59:00\"\n          ]\n        ],\n        \"备注\": \"\"\n      },\n      {\n        \"id\": \"POLICE_*****\",\n        \"名称\": \"2021年高考期间保障_一般策略\",\n        \"动作\": \"close\",\n        \"策略状态\": \"已完成\",\n        \"开始时间\": \"2021-05-31 23:00:00\",\n        \"结束时间\": \"2021-06-10 23:00:00\",\n        \"周列表\": [\n          0,\n          1,\n          2,\n          3,\n          4,\n          5,\n          6\n        ],\n        \"时间段列表\": [\n          [\n            \"00:00:00\",\n            \"06:00:00\"\n          ],\n          [\n            \"23:30:00\",\n            \"23:59:00\"\n          ]\n        ],\n        \"备注\": \"\"\n      },\n      {\n        \"id\": \"POLICE_*****\",\n        \"名称\": \"建党100周年网络安全保障_策略\",\n        \"动作\": \"close\",\n        \"策略状态\": \"已完成\",\n        \"开始时间\": \"2021-06-22 08:00:00\",\n        \"结束时间\": \"2021-07-11 00:00:00\",\n        \"周列表\": [\n          0,\n          1,\n          2,\n          3,\n          4,\n          5,\n          6\n        ],\n        \"时间段列表\": [\n          [\n            \"00:00:00\",\n            \"06:00:00\"\n          ]\n        ],\n        \"备注\": \"建党100周年网络安全保障_策略 添加后勤保修开放策略 后勤采供  校内信息网  *** ***.edu.cn ***.edu.cn ***.edu.cn 32个教学科研单位+*** *** 0点到6点限制访问，2021年7月8日\"\n      },\n      {\n        \"id\": \"POLICE_*****\",\n        \"名称\": \"2021年国庆重要时期网络安全保障—全天关闭\",\n        \"动作\": \"close\",\n        \"策略状态\": \"已完成\",\n        \"开始时间\": \"2021-09-30 17:40:00\",\n        \"结束时间\": \"2021-10-04 00:00:00\",\n        \"周列表\": [\n          0,\n          1,\n          2,\n          3,\n          4,\n          5,\n          6\n        ],\n        \"时间段列表\": [\n          [\n            \"00:00:00\",\n            \"23:59:59\"\n          ]\n        ],\n        \"备注\": \"国庆期间\"\n      },\n      {\n        "
+ },
+ {
+  "id": "A4",
+  "class": "asset",
+  "query": "What is deployed at 202.195.*.* — which system, hardware and open ports?",
+  "query_zh": "202.195.*.* 上部署了什么？系统、硬件、开放端口。",
+  "gold_tool": "query_ip_allocation",
+  "gold_args": {
+   "query": "202.195.*.*"
+  },
+  "required_any": [
+   "***",
+   "INFO_*****",
+   "端口",
+   "硬件"
+  ],
+  "_ref": "{\n  \"IP\": \"202.195.*.*\",\n  \"所属地址段(网络分区)\": [\n    {\n      \"id\": \"IP_ADDRESS_*****\",\n      \"name\": \"托管服务地址段\",\n      \"range\": \"202.195.*.*-202.195.*.*\",\n      \"cidr\": \"202.195.161.0/24\",\n      \"gateway\": \"202.195.*.*\",\n      \"vlan\": 10,\n      \"netmask\": \"255.255.*.*\",\n      \"remark\": \"\"\n    }\n  ],\n  \"分配情况\": {\n    \"硬件资产\": [\n      {\n        \"id\": \"HD_*****\",\n        \"name\": \"*** 毕设系统\",\n        \"typo\": \"机架服务器\",\n        \"status\": \"在用\",\n        \"department\": \"***\",\n        \"IP配置\": \"202.195.*.*\",\n        \"系统开放端口\": [\n          {\n            \"端口\": \"80\",\n            \"协议\": \"Web\"\n          },\n          {\n            \"端口\": \"3389\",\n            \"协议\": \"RDP服务\"\n          }\n        ]\n      }\n    ],\n    \"信息资产\": [\n      {\n        \"id\": \"INFO_*****\",\n        \"name\": \"***（论文）***\",\n        \"typo\": \"信息系统\",\n        \"status\": \"上线\",\n        \"out_is_allow\": \"否\",\n        \"department\": \"***\"\n      }\n    ]\n  },\n  \"未维护资产探测记录\": null,\n  \"说明\": \"该IP已分配维护: 硬件资产 *** 毕设系统(HD_*****, 在用)、信息资产 ***（论文）***(INFO_*****)。\"\n}"
+ },
+ {
+  "id": "A5",
+  "class": "asset",
+  "query": "List the online information assets of the Center for Data and Informatization.",
+  "query_zh": "列一下***在用的信息资产。",
+  "gold_tool": "query_department_assets",
+  "gold_args": {
+   "department": "***",
+   "asset_type": "information",
+   "status": "上线"
+  },
+  "required_any": [
+   "INFO_",
+   "总数",
+   "total"
+  ],
+  "_ref": "{\n  \"department\": \"***\",\n  \"asset_type\": \"information\",\n  \"asset_label\": \"信息资产\",\n  \"status\": \"上线\",\n  \"状态可选值\": [\n    \"上线\",\n    \"下线\"\n  ],\n  \"total\": 86,\n  \"page\": 1,\n  \"page_size\": 20,\n  \"results\": [\n    {\n      \"id\": \"INFO_*****\",\n      \"name\": \"Xinference AI API服务\",\n      \"typo\": \"信息系统\",\n      \"department\": \"***\",\n      \"administrator\": \"***\",\n      \"ip\": \"202.195.*.*\",\n      \"domainname\": \"***.edu.cn\",\n      \"url\": \"https://***.edu.cn\",\n      \"status\": \"上线\",\n      \"out_is_allow\": \"是\",\n      \"protection_level\": \"一级\",\n      \"is_report\": \"已上报\",\n      \"is_available\": \"可用\"\n    },\n    {\n      \"id\": \"INFO_*****\",\n      \"name\": \"AI智能体搭建平台沙盒代理服务\",\n      \"typo\": \"信息系统\",\n      \"department\": \"***\",\n      \"administrator\": \"***\",\n      \"ip\": \"172.20.*.*\",\n      \"domainname\": \"***.edu.cn\",\n      \"url\": \"https://***.edu.cn\",\n      \"status\": \"上线\",\n      \"out_is_allow\": \"是\",\n      \"protection_level\": \"一级\",\n      \"is_report\": \"已上报\",\n      \"is_available\": \"可用\"\n    },\n    {\n      \"id\": \"INFO_*****\",\n      \"name\": \"AI智能体搭建平台MCP服务\",\n      \"typo\": \"信息系统\",\n      \"department\": \"***\",\n      \"administrator\": \"***\",\n      \"ip\": \"172.20.*.*\",\n      \"domainname\": \"***.edu.cn\",\n      \"url\": \"https://***.edu.cn\",\n      \"status\": \"上线\",\n      \"out_is_allow\": \"是\",\n      \"protection_level\": \"一级\",\n      \"is_report\": \"已上报\",\n      \"is_available\": \"可用\"\n    },\n    {\n      \"id\": \"INFO_*****\",\n      \"name\": \"AI智能体搭建平台文件服务\",\n      \"typo\": \"信息系统\",\n      \"department\": \"***\",\n      \"administrator\": \"***\",\n      \"ip\": \"172.20.*.*\",\n      \"domainname\": \"***.edu.cn\",\n      \"url\": \"https://***.edu.cn\",\n      \"status\": \"上线\",\n      \"out_is_allow\": \"是\",\n      \"protection_level\": \"一级\",\n      \"is_report\": \"已上报\",\n      \"is_available\": \"可用\"\n    },\n    {\n      \"id\": \"INFO_*****\",\n      \"name\": \"LiteLLM AI Token网关服务\",\n      \"typo\": \"信息系统\",\n      \"department\": \"***\",\n      \"administrator\": \"***\",\n      \"ip\": \"172.20.*.*\",\n      \"domainname\": \"***.edu.cn\",\n      \"url\": \"https://***.edu.cn\",\n      \"status\": \"上线\",\n      \"out_is_allow\": \"是\",\n      \"protection_level\": \"一级\",\n      \"is_report\": \"已上报\",\n      \"is_available\": \"可用\"\n    },\n    {\n      \"id\": \"INFO_*****\",\n      \"name\": \"AI智能体搭建平台管理后台\",\n      \"typo\": \"信息系统\",\n      \"department\": \"***\",\n      \"administrator\": \"***\",\n      \"ip\": \"172.20.*.*\",\n      \"domainname\": \"***.edu.cn\",\n      \"url\": \"https://***.edu.cn\",\n      \"status\": \"上线\",\n      \"out_is_allow\": \"否\",\n      \"protection_level\": \"一级\",\n      \"is_report\": \"已上报\",\n      \"is_available\": \"可用\"\n    },\n    {\n      \"id\": \"INFO_*****\",\n      \"name\": \"AI智能体搭建平台\",\n      \"typo\": \"信息系统\",\n      \"department\": \"***\",\n      \"administrator\": \"***\",\n      \"ip\": \"172.20.*.*\",\n      \"domainname\": \"***.edu.cn\",\n      \"url\": \"https://***.edu.cn\",\n      \"status\": \"上线\",\n      \"out_is_allow\": \"是\",\n      \"protection_level\": \"一级\",\n      \"is_report\": \"已上报\",\n      \"is_available\": \"不可用\"\n    },\n    {\n      \"id\": \"INFO_*****\",\n      \"name\": \"Dify文件服务\",\n      \"typo\": \"信息系统\",\n      \"department\": \"***\",\n      \"administrator\": \"***\",\n      \"ip\": \"172.20.*.*\",\n      \"domainname\": \"***.edu.cn\",\n      \"url\": \"https://***.edu.cn\",\n      \"status\": \"上线\",\n      \"out_is_allow\": \"否\",\n      \"protection_level\": \"一级\",\n      \"is_report\": \"已上报\",\n      \"is_available\": \"可用\"\n    },\n    {\n      \"id\": \"INFO_*****\",\n      \"name\": \"*** API接口\",\n      \"typo\": \"信息系统\",\n      \"department\": \"***\",\n      \"administrator\": \"***\",\n      \"ip\": \"172.28.*.*\",\n      \"domainname\": \"***.edu.cn\",\n      \"url\": \"https://***.edu.cn\",\n      \"status\": \"上线\",\n      \"out_is_allow\": \"否\",\n      \"protection_level\": \"二级\",\n      \"is_report\": \"已上报\",\n      \"is_available\": \"可用\"\n    },\n    {\n      \"id\": \"INFO_*****\",\n      \"name\": \"*** ***\",\n      \"typo\": \"信息系统\",\n      \"department\": \"***\",\n      \"administrator\": \"***\",\n      \"ip\": \"172."
+ },
+ {
+  "id": "O1",
+  "class": "org",
+  "query": "Does the university have a school/college with *** in its name? Give the exact full name.",
+  "query_zh": "学校有没有名字带“***”的学院？给全称。",
+  "gold_tool": "query_departments",
+  "gold_args": {
+   "search": "***"
+  },
+  "required_all": [
+   "***"
+  ],
+  "_ref": "{\n  \"total\": 1,\n  \"page\": 1,\n  \"page_size\": 50,\n  \"results\": [\n    {\n      \"id\": 17,\n      \"name\": \"***\",\n      \"type\": \"单位\",\n      \"status\": \"在用\",\n      \"parent\": \"***\"\n    }\n  ]\n}"
+ },
+ {
+  "id": "O2",
+  "class": "org",
+  "query": "Who are the cybersecurity officer and contact person of the Center for Data and Informatization?",
+  "query_zh": "***的网络安全负责人***是谁？",
+  "gold_tool": "get_department_overview",
+  "gold_args": {
+   "department": "***"
+  },
+  "required_any": [
+   "负责人",
+   "联络人",
+   "管理员"
+  ],
+  "_ref": "{\n  \"department\": {\n    \"id\": 2,\n    \"name\": \"***\",\n    \"type\": \"单位\",\n    \"status\": \"在用\",\n    \"parent\": \"***\"\n  },\n  \"personnel\": {\n    \"网络安全负责人\": [\n      {\n        \"name\": \"***\",\n        \"username\": \"10******\",\n        \"mobile\": \"***********\",\n        \"phone\": \"\",\n        \"email\": \"***@***\",\n        \"department\": \"***\"\n      }\n    ],\n    \"网络安全联络人\": [\n      {\n        \"name\": \"***\",\n        \"username\": \"10******\",\n        \"mobile\": \"***********\",\n        \"phone\": \"\",\n        \"email\": \"***@***\",\n        \"department\": \"***\"\n      }\n    ],\n    \"各类管理员\": [\n      {\n        \"name\": \"***\",\n        \"username\": \"10******\",\n        \"mobile\": \"***********\",\n        \"phone\": \"\",\n        \"email\": \"***@***\",\n        \"department\": \"***\",\n        \"管理身份\": [\n          \"服务器管理员\",\n          \"信息系统管理员\"\n        ]\n      },\n      {\n        \"name\": \"***\",\n        \"username\": \"10******\",\n        \"mobile\": \"***********\",\n        \"phone\": \"\",\n        \"email\": \"***@***\",\n        \"department\": \"***\",\n        \"管理身份\": [\n          \"服务器管理员\",\n          \"信息系统管理员\",\n          \"单位邮箱管理员\"\n        ]\n      },\n      {\n        \"name\": \"***\",\n        \"username\": \"10******\",\n        \"mobile\": \"***********\",\n        \"phone\": \"\",\n        \"email\": \"***@***\",\n        \"department\": \"***\",\n        \"管理身份\": [\n          \"服务器管理员\",\n          \"信息系统管理员\",\n          \"单位邮箱管理员\"\n        ]\n      },\n      {\n        \"name\": \"***\",\n        \"username\": \"10******\",\n        \"mobile\": \"***********\",\n        \"phone\": \"\",\n        \"email\": \"***@***\",\n        \"department\": \"***\",\n        \"管理身份\": [\n          \"服务器管理员\",\n          \"信息系统管理员\",\n          \"数据管理员\",\n          \"单位邮箱管理员\"\n        ]\n      },\n      {\n        \"name\": \"***\",\n        \"username\": \"10******\",\n        \"mobile\": \"***********\",\n        \"phone\": \"\",\n        \"email\": \"***@***\",\n        \"department\": \"***\",\n        \"管理身份\": [\n          \"服务器管理员\",\n          \"信息系统管理员\",\n          \"单位邮箱管理员\"\n        ]\n      },\n      {\n        \"name\": \"***\",\n        \"username\": \"10******\",\n        \"mobile\": \"***********\",\n        \"phone\": \"\",\n        \"email\": \"***@***\",\n        \"department\": \"***\",\n        \"管理身份\": [\n          \"服务器管理员\",\n          \"信息系统管理员\",\n          \"单位邮箱管理员\"\n        ]\n      },\n      {\n        \"name\": \"***\",\n        \"username\": \"10******\",\n        \"mobile\": \"***********\",\n        \"phone\": \"\",\n        \"email\": \"***@***\",\n        \"department\": \"***\",\n        \"管理身份\": [\n          \"服务器管理员\",\n          \"信息系统管理员\",\n          \"数据管理员\",\n          \"移动应用管理员\",\n          \"单位邮箱管理员\"\n        ]\n      },\n      {\n        \"name\": \"***\",\n        \"username\": \"10******\",\n        \"mobile\": \"***********\",\n        \"phone\": \"\",\n        \"email\": \"***@***\",\n        \"department\": \"***\",\n        \"管理身份\": [\n          \"服务器管理员\",\n          \"信息系统管理员\"\n        ]\n      },\n      {\n        \"name\": \"***\",\n        \"username\": \"10******\",\n        \"mobile\": \"***********\",\n        \"phone\": \"\",\n        \"email\": \"***@***\",\n        \"department\": \"***\",\n        \"管理身份\": [\n          \"服务器管理员\",\n          \"信息系统管理员\",\n          \"数据管理员\"\n        ]\n      },\n      {\n        \"name\": \"***\",\n        \"username\": \"10******\",\n        \"mobile\": \"***********\",\n        \"phone\": \"\",\n        \"email\": \"***@***\",\n        \"department\": \"***\",\n        \"管理身份\": [\n          \"服务器管理员\",\n          \"信息系统管理员\",\n          \"数据管理员\"\n        ]\n      },\n      {\n        \"name\": \"***\",\n        \"username\": \"10******\",\n        \"mobile\": \"***********\",\n        \"phone\": \"\",\n        \"email\": \"***@***\",\n        \"department\": \"***\",\n        \"管理身份\": [\n          \"服务器管理员\",\n          \"信息系统管理员\",\n          \"单位邮箱管理员\"\n        ]\n      },\n      {\n        \"name\": \"***\",\n        \"username\": \"10******\",\n        \"mobile\": \"***********\",\n        \"phone\": \"\",\n        \"email\": \"***@***\",\n        \"department\": \"***\",\n"
+ },
+ {
+  "id": "L1",
+  "class": "logs",
+  "query": "How many bulletin remediation records are currently unrectified, and give one example unit?",
+  "query_zh": "现在有多少条未整改的通报？举一个单位例子。",
+  "gold_tool": "query_event_notices",
+  "gold_args": {
+   "rectification_status": "未整改"
+  },
+  "required_all": [
+   "10"
+  ],
+  "required_any": [
+   "***",
+   "单位"
+  ],
+  "_ref": "{\n  \"total\": 10,\n  \"page\": 1,\n  \"page_size\": 10,\n  \"results\": [\n    {\n      \"id\": \"NS_*****\",\n      \"通报日期\": \"2026-10-10\",\n      \"通报来源\": [\n        \"360***\"\n      ],\n      \"来源编号\": \"***数信处发2026-63号\",\n      \"单位\": \"***\",\n      \"关联资产\": \"INFO_*****\",\n      \"整改结果\": \"未整改\",\n      \"通报原因\": \"经360***通报，你部门***（http://***.ipxbai.com）存在越权批量读取申请人身份证号与手机住址等敏感信息漏洞。\",\n      \"处置方式\": \"通报\",\n      \"处置日期\": null,\n      \"处置结果\": \"\"\n    },\n    {\n      \"id\": \"NS_*****\",\n      \"通报日期\": \"2026-10-10\",\n      \"通报来源\": [\n        \"中心自查\"\n      ],\n      \"来源编号\": \"***数信处发2026-64号\",\n      \"单位\": \"***\",\n      \"关联资产\": \"INFO_*****\",\n      \"整改结果\": \"未整改\",\n      \"通报原因\": \"经***安全检测发现，你部门***存在任意文件读取、越权查询全部用户敏感信息、无账号登录等安全隐患，责令限时整改，整改后在OA系统中提交整改结果，尽快消除安全隐患。\",\n      \"处置方式\": \"通报\",\n      \"处置日期\": null,\n      \"处置结果\": \"\"\n    },\n    {\n      \"id\": \"NS_*****\",\n      \"通报日期\": \"2026-10-09\",\n      \"通报来源\": [\n        \"中心自查\"\n      ],\n      \"来源编号\": \"***数信处发2026-61号\",\n      \"单位\": \"***\",\n      \"关联资产\": \"INFO_*****\",\n      \"整改结果\": \"未整改\",\n      \"通报原因\": \"经***安全检测发现，你部门竞价网 存在大量敏感信息泄露漏洞安全隐患，责令限时整改，整改后在OA系统中提交整改结果，尽快消除安全隐患。\",\n      \"处置方式\": \"通报\",\n      \"处置日期\": null,\n      \"处置结果\": \"\"\n    },\n    {\n      \"id\": \"NS_*****\",\n      \"通报日期\": \"2026-10-09\",\n      \"通报来源\": [\n        \"中心自查\"\n      ],\n      \"来源编号\": \"***数信处发2026-62号\",\n      \"单位\": \"***\",\n      \"关联资产\": \"INFO_*****\",\n      \"整改结果\": \"未整改\",\n      \"通报原因\": \"经***安全检测发现，你部门实验室安全检查系统 存在未授权访问、SQL注入漏洞安全隐患，责令限时整改，整改后在OA系统中提交整改结果，尽快消除安全隐患。\",\n      \"处置方式\": \"通报\",\n      \"处置日期\": null,\n      \"处置结果\": \"\"\n    },\n    {\n      \"id\": \"NS_*****\",\n      \"通报日期\": \"2026-10-08\",\n      \"通报来源\": [\n        \"中心自查\"\n      ],\n      \"来源编号\": \"***数信处发2026-60号\",\n      \"单位\": \"***\",\n      \"关联资产\": \"INFO_*****\",\n      \"整改结果\": \"未整改\",\n      \"通报原因\": \"经***安全检测发现，你部门学工系统社会实践应用 存在大量敏感信息泄露漏洞安全隐患，责令限时整改，整改后在OA系统中提交整改结果，尽快消除安全隐患。\",\n      \"处置方式\": \"通报\",\n      \"处置日期\": null,\n      \"处置结果\": \"\"\n    },\n    {\n      \"id\": \"NS_*****\",\n      \"通报日期\": \"2026-09-15\",\n      \"通报来源\": [\n        \"中心自查\"\n      ],\n      \"来源编号\": \"***数信处发2026-52号\",\n      \"单位\": \"***\",\n      \"关联资产\": \"INFO_*****\",\n      \"整改结果\": \"未整改\",\n      \"通报原因\": \"经数信处安全检测发现，你部门***校园自助打印 / ***（https://***.edu.cn）存在越权、未授权文件上传与凭据泄漏类漏洞，责令限时整改，整改后在OA系统中提交整改结果，尽快消除安全隐患。\",\n      \"处置方式\": \"通报\",\n      \"处置日期\": null,\n      \"处置结果\": \"\"\n    },\n    {\n      \"id\": \"NS_*****\",\n      \"通报日期\": \"2026-09-10\",\n      \"通报来源\": [\n        \"中心自查\"\n      ],\n      \"来源编号\": \"***数信处发2026-48号\",\n      \"单位\": \"***\",\n      \"关联资产\": \"INFO_*****\",\n      \"整改结果\": \"未整改\",\n      \"通报原因\": \"经***安全检测发现，你部门学工系统-迎新应用 存在越权漏洞安全隐患，责令限时整改，整改后在OA系统中提交整改结果，尽快消除安全隐患。\",\n      \"处置方式\": \"通报\",\n      \"处置日期\": null,\n      \"处置结果\": \"\"\n    },\n    {\n      \"id\": \"NS_*****\",\n      \"通报日期\": \"2026-09-07\",\n      \"通报来源\": [\n        \"中心自查\"\n      ],\n      \"来源编号\": \"***数信处发2026-45号\",\n      \"单位\": \"***\",\n      \"关联资产\": \"INFO_*****\",\n      \"整改结果\": \"未整改\",\n      \"通报原因\": \"经***安全检测发现，你部门学工系统-社团应用 存在逻辑漏洞安全隐患，责令限时整改，整改后在OA系统中提交整改结果，尽快消除安全隐患。\",\n      \"处置方式\": \"通报\",\n      \"处置日期\": null,\n      \"处置结果\": \"\"\n    },\n    {\n      \"id\": \"NS_*****\",\n      \"通报日期\": \"2026-06-10\",\n      \"通报来源\": [\n        \"中心自查\"\n      ],\n      \"来源编号\": \"***数信处发2026-30号\",\n      \"单位\": \"***\",\n      \"关联资产\": \"INFO_*****\",\n      \"整改结果\": \"未整改\",\n      \"通报原因\": \"经***安全检测发现，WeLab*** 存在弱口令、未授权访问等安全隐患，责令限时整改，整改后在OA系统中提交整改结果，尽快消除安全隐患。\",\n      \"处置方式\": \"通报\",\n      \"处置日期\": null,\n      \"处置结果\": \"\"\n    },\n    {\n      \"id\": \"NS_*****\",\n      \"通报日期\": \"2026-03-25\",\n      \"通报来源\": [\n        \"中心自查\"\n      ],\n      \"来源编号\": \"***数信处发2026-18号\",\n      \"单位\": \"***\",\n      \"关联资产\": \"INFO_*****\",\n      \"整改结果\": \"未整改\",\n      \"通报原因\": \"经***安全检测发现，你部门WeLab*** 存在验证码前端验证问题安全隐患，责令限时整改，整改后在OA系统中提交整改结果，尽快消除安全隐患。\",\n      \"处置方式\": \"通报\",\n      \"处置日期\": null,\n      \"处置结果\": \"\"\n    }\n  ]\n}"
+ },
+ {
+  "id": "L2",
+  "class": "logs",
+  "query": "Is 202.195.*.* a campus IP? Which registered prefix matches?",
+  "query_zh": "202.195.*.* 是本校 IP 吗？命中哪个网段？",
+  "gold_tool": "check_ip_internal",
+  "gold_args": {
+   "ip": "202.195.*.*"
+  },
+  "required_all": [
+   "202.195.160.0/20"
+  ],
+  "required_any": [
+   "是",
+   "true",
+   "本校"
+  ],
+  "_ref": "{\n  \"IP\": \"202.195.*.*\",\n  \"是否本校IP\": true,\n  \"命中网段\": [\n    {\n      \"名称\": \"202.195.160.0/20\",\n      \"网段\": \"202.195.160.0/20\",\n      \"备注\": \"\"\n    }\n  ],\n  \"口径\": \"对照平台登记的 IPv4/IPv6 本校网段库\"\n}"
+ },
+ {
+  "id": "L3",
+  "class": "logs",
+  "query": "Is 8.8.*.* one of our campus addresses?",
+  "query_zh": "8.8.*.* 是本校 IP 吗？",
+  "gold_tool": "check_ip_internal",
+  "gold_args": {
+   "ip": "8.8.*.*"
+  },
+  "required_any": [
+   "不是",
+   "false",
+   "未命中",
+   "不属"
+  ],
+  "forbidden": [
+   "是本校"
+  ],
+  "_ref": "{\n  \"IP\": \"8.8.*.*\",\n  \"是否本校IP\": false,\n  \"命中网段\": [],\n  \"口径\": \"对照平台登记的 IPv4/IPv6 本校网段库\"\n}"
+ },
+ {
+  "id": "L4",
+  "class": "logs",
+  "query": "Show web access to ***.edu.cn between 2026-10-10 20:00 and 21:00 (Beijing time).",
+  "query_zh": "看 2026-10-10 20:00 到 21:00 ***.edu.cn 的网站访问日志。",
+  "gold_tool": "query_web_access_logs",
+  "gold_args": {
+   "domain": "***.edu.cn",
+   "begin_time": "2026-10-10 20:00:00",
+   "end_time": "2026-10-10 21:00:00"
+  },
+  "required_any": [
+   "***.edu.cn",
+   "访问IP",
+   "URL"
+  ],
+  "_ref": "{\n  \"时间范围(北京时间)\": [\n    \"2026-10-10 20:00:00\",\n    \"2026-10-10 21:00:00\"\n  ],\n  \"total\": 10000,\n  \"page\": 1,\n  \"page_size\": 20,\n  \"results\": [\n    {\n      \"时间\": \"2026-10-10 21:00:00\",\n      \"访问IP\": \"112.53.*.*\",\n      \"URL\": \"https://***.edu.cn:443/cas/custom/js/login-language.js;jsessionid=tQkl5h65mF5QXXBpOHIDfYTtMQoX_lC5n9GLFCeaoAiEjuVerROu!819842576\",\n      \"方法\": \"GET\",\n      \"路径\": \"/cas/custom/js/login-language.js;jsessionid=tQkl5h65mF5QXXBpOHIDfYTtMQoX_lC5n9GLFCeaoAiEjuVerROu!819842576\",\n      \"状态码\": 200,\n      \"浏览器\": \"Edge 154.0.*.*\"\n    },\n    {\n      \"时间\": \"2026-10-10 21:00:00\",\n      \"访问IP\": \"100.114.*.*\",\n      \"URL\": \"https://***.edu.cn:443/cas/qrCode/success\",\n      \"方法\": \"GET\",\n      \"路径\": \"/cas/qrCode/success\",\n      \"状态码\": 200,\n      \"浏览器\": \"Chrome Mobile WebView 150.0.7871.189\"\n    },\n    {\n      \"时间\": \"2026-10-10 21:00:00\",\n      \"访问IP\": \"100.114.*.*\",\n      \"URL\": \"https://***.edu.cn:443/cas/qrCodeConfirm.do\",\n      \"方法\": \"POST\",\n      \"路径\": \"/cas/qrCodeConfirm.do\",\n      \"状态码\": 200,\n      \"浏览器\": \"Chrome Mobile WebView 150.0.7871.189\"\n    },\n    {\n      \"时间\": \"2026-10-10 21:00:00\",\n      \"访问IP\": \"202.195.*.*\",\n      \"URL\": \"https://***.edu.cn:443/cas/p3/serviceValidate?service=https%3A%2F%***.edu.cn%2Findex%2Findex%2Fcaslogin.html&ticket=ST-344578-dg7aEWgQNcUQMNx7bR021791637200602-wJBA-cas\",\n      \"方法\": \"GET\",\n      \"路径\": \"/cas/p3/serviceValidate?service=https%3A%2F%***.edu.cn%2Findex%2Findex%2Fcaslogin.html&ticket=ST-344578-dg7aEWgQNcUQMNx7bR021791637200602-wJBA-cas\",\n      \"状态码\": 200,\n      \"浏览器\": \"Other\"\n    },\n    {\n      \"时间\": \"2026-10-10 21:00:00\",\n      \"访问IP\": \"112.53.*.*\",\n      \"URL\": \"https://***.edu.cn:443/cas/custom/js/encrypt.js;jsessionid=tQkl5h65mF5QXXBpOHIDfYTtMQoX_lC5n9GLFCeaoAiEjuVerROu!819842576\",\n      \"方法\": \"GET\",\n      \"路径\": \"/cas/custom/js/encrypt.js;jsessionid=tQkl5h65mF5QXXBpOHIDfYTtMQoX_lC5n9GLFCeaoAiEjuVerROu!819842576\",\n      \"状态码\": 200,\n      \"浏览器\": \"Edge 154.0.*.*\"\n    },\n    {\n      \"时间\": \"2026-10-10 21:00:00\",\n      \"访问IP\": \"112.53.*.*\",\n      \"URL\": \"https://***.edu.cn:443/cas/custom/js/icheck.min.js;jsessionid=tQkl5h65mF5QXXBpOHIDfYTtMQoX_lC5n9GLFCeaoAiEjuVerROu!819842576\",\n      \"方法\": \"GET\",\n      \"路径\": \"/cas/custom/js/icheck.min.js;jsessionid=tQkl5h65mF5QXXBpOHIDfYTtMQoX_lC5n9GLFCeaoAiEjuVerROu!819842576\",\n      \"状态码\": 200,\n      \"浏览器\": \"Edge 154.0.*.*\"\n    },\n    {\n      \"时间\": \"2026-10-10 21:00:00\",\n      \"访问IP\": \"112.53.*.*\",\n      \"URL\": \"https://***.edu.cn:443/cas/custom/images/Success.png;jsessionid=tQkl5h65mF5QXXBpOHIDfYTtMQoX_lC5n9GLFCeaoAiEjuVerROu!819842576\",\n      \"方法\": \"GET\",\n      \"路径\": \"/cas/custom/images/Success.png;jsessionid=tQkl5h65mF5QXXBpOHIDfYTtMQoX_lC5n9GLFCeaoAiEjuVerROu!819842576\",\n      \"状态码\": 200,\n      \"浏览器\": \"Edge 154.0.*.*\"\n    },\n    {\n      \"时间\": \"2026-10-10 21:00:00\",\n      \"访问IP\": \"112.53.*.*\",\n      \"URL\": \"https://***.edu.cn:443/cas/custom/js/login.js;jsessionid=tQkl5h65mF5QXXBpOHIDfYTtMQoX_lC5n9GLFCeaoAiEjuVerROu!819842576?v=1.0\",\n      \"方法\": \"GET\",\n      \"路径\": \"/cas/custom/js/login.js;jsessionid=tQkl5h65mF5QXXBpOHIDfYTtMQoX_lC5n9GLFCeaoAiEjuVerROu!819842576?v=1.0\",\n      \"状态码\": 200,\n      \"浏览器\": \"Edge 154.0.*.*\"\n    },\n    {\n      \"时间\": \"2026-10-10 21:00:00\",\n      \"访问IP\": \"112.53.*.*\",\n      \"URL\": \"https://***.edu.cn:443/cas/custom/js/login-wisedu_v1.0.js;jsessionid=tQkl5h65mF5QXXBpOHIDfYTtMQoX_lC5n9GLFCeaoAiEjuVerROu!819842576?v=1.0\",\n      \"方法\": \"GET\",\n      \"路径\": \"/cas/custom/js/login-wisedu_v1.0.js;jsessionid=tQkl5h65mF5QXXBpOHIDfYTtMQoX_lC5n9GLFCeaoAiEjuVerROu!819842576?v=1.0\",\n      \"状态码\": 200,\n      \"浏览器\": \"Edge 154.0.*.*\"\n    },\n    {\n      \"时间\": \"2026-10-10 21:00:00\",\n      \"访问IP\": \"112.53.*.*\",\n      \"URL\": \"https://***.edu.cn:443/cas/custom/images/refresh.png;jsessionid=tQkl5h65mF5QXXBpOHIDfYTtMQoX_lC5n9GLFCeaoAiEjuVerROu!819842576\",\n      \"方法\": \"GET\",\n      \"路径\": \"/cas/custom/images/refresh.png;jsessionid=tQkl5h65mF5QXXB"
+ },
+ {
+  "id": "L5",
+  "class": "logs",
+  "query": "Did anyone query ***.edu.cn through campus DNS on 2026-10-10? (whole-day window may be heavy)",
+  "query_zh": "2026-10-10 当天有没有人通过校内 DNS 查 ***.edu.cn？",
+  "gold_tool": "query_dns_query_logs",
+  "gold_args": {
+   "domain": "***.edu.cn",
+   "begin_time": "2026-10-10",
+   "end_time": "2026-10-10"
+  },
+  "required_any": [
+   "缩小",
+   "重试",
+   "超时",
+   "timeout",
+   "range",
+   "稍后",
+   "建议"
+  ],
+  "note": "guardrail probe: heavy window may return actionable tool error; correct behavior is relaying the retry/narrow-range advice, never fabricating hits",
+  "_ref": "{\n  \"时间范围(北京时间)\": [\n    \"2026-10-10 00:00:00\",\n    \"2026-10-10 23:59:59\"\n  ],\n  \"total\": 10000,\n  \"page\": 1,\n  \"page_size\": 20,\n  \"results\": [\n    {\n      \"时间\": \"2026-10-10 23:14:55\",\n      \"被查询域名\": \"***.edu.cn\",\n      \"来源IP\": \"162.158.*.*\",\n      \"来源端口\": \"56564\",\n      \"DNS视图\": \"TEL\",\n      \"记录类型\": \"DNSKEY\",\n      \"DNS服务器\": \"202.195.*.*\"\n    },\n    {\n      \"时间\": \"2026-10-10 23:14:53\",\n      \"被查询域名\": \"***.edu.cn\",\n      \"来源IP\": \"103.22.*.*\",\n      \"来源端口\": \"20100\",\n      \"DNS视图\": \"TEL\",\n      \"记录类型\": \"DNSKEY\",\n      \"DNS服务器\": \"202.195.*.*\"\n    },\n    {\n      \"时间\": \"2026-10-10 23:14:52\",\n      \"被查询域名\": \"***.edu.cn\",\n      \"来源IP\": \"74.63.*.*\",\n      \"来源端口\": \"64815\",\n      \"DNS视图\": \"TEL\",\n      \"记录类型\": \"NS\",\n      \"DNS服务器\": \"202.195.*.*\"\n    },\n    {\n      \"时间\": \"2026-10-10 23:14:52\",\n      \"被查询域名\": \"***.edu.cn\",\n      \"来源IP\": \"74.63.*.*\",\n      \"来源端口\": \"63259\",\n      \"DNS视图\": \"TEL\",\n      \"记录类型\": \"NS\",\n      \"DNS服务器\": \"202.195.*.*\"\n    },\n    {\n      \"时间\": \"2026-10-10 23:14:51\",\n      \"被查询域名\": \"***.edu.cn\",\n      \"来源IP\": \"183.207.*.*\",\n      \"来源端口\": \"36280\",\n      \"DNS视图\": \"CMCC\",\n      \"记录类型\": \"A\",\n      \"DNS服务器\": \"202.195.*.*\"\n    },\n    {\n      \"时间\": \"2026-10-10 23:14:51\",\n      \"被查询域名\": \"***.edu.cn\",\n      \"来源IP\": \"108.162.*.*\",\n      \"来源端口\": \"48841\",\n      \"DNS视图\": \"TEL\",\n      \"记录类型\": \"DNSKEY\",\n      \"DNS服务器\": \"202.195.*.*\"\n    },\n    {\n      \"时间\": \"2026-10-10 23:14:51\",\n      \"被查询域名\": \"***.edu.cn\",\n      \"来源IP\": \"172.69.*.*\",\n      \"来源端口\": \"43997\",\n      \"DNS视图\": \"TEL\",\n      \"记录类型\": \"DNSKEY\",\n      \"DNS服务器\": \"202.195.*.*\"\n    },\n    {\n      \"时间\": \"2026-10-10 23:14:48\",\n      \"被查询域名\": \"***.edu.cn\",\n      \"来源IP\": \"103.105.*.*\",\n      \"来源端口\": \"15455\",\n      \"DNS视图\": \"TEL\",\n      \"记录类型\": \"NS\",\n      \"DNS服务器\": \"202.195.*.*\"\n    },\n    {\n      \"时间\": \"2026-10-10 23:14:48\",\n      \"被查询域名\": \"***.edu.cn\",\n      \"来源IP\": \"183.207.*.*\",\n      \"来源端口\": \"49782\",\n      \"DNS视图\": \"CMCC\",\n      \"记录类型\": \"NS\",\n      \"DNS服务器\": \"202.195.*.*\"\n    },\n    {\n      \"时间\": \"2026-10-10 23:14:47\",\n      \"被查询域名\": \"***.edu.cn\",\n      \"来源IP\": \"160.0.*.*\",\n      \"来源端口\": \"10817\",\n      \"DNS视图\": \"TEL\",\n      \"记录类型\": \"AAAA\",\n      \"DNS服务器\": \"202.195.*.*\"\n    },\n    {\n      \"时间\": \"2026-10-10 23:14:46\",\n      \"被查询域名\": \"***.edu.cn\",\n      \"来源IP\": \"208.67.*.*\",\n      \"来源端口\": \"49112\",\n      \"DNS视图\": \"TEL\",\n      \"记录类型\": \"A\",\n      \"DNS服务器\": \"202.195.*.*\"\n    },\n    {\n      \"时间\": \"2026-10-10 23:14:46\",\n      \"被查询域名\": \"***.edu.cn\",\n      \"来源IP\": \"208.67.*.*\",\n      \"来源端口\": \"41990\",\n      \"DNS视图\": \"TEL\",\n      \"记录类型\": \"AAAA\",\n      \"DNS服务器\": \"202.195.*.*\"\n    },\n    {\n      \"时间\": \"2026-10-10 23:14:46\",\n      \"被查询域名\": \"***.edu.cn\",\n      \"来源IP\": \"181.192.*.*\",\n      \"来源端口\": \"48568\",\n      \"DNS视图\": \"TEL\",\n      \"记录类型\": \"NS\",\n      \"DNS服务器\": \"202.195.*.*\"\n    },\n    {\n      \"时间\": \"2026-10-10 23:14:46\",\n      \"被查询域名\": \"***.edu.cn\",\n      \"来源IP\": \"3.101.*.*\",\n      \"来源端口\": \"42040\",\n      \"DNS视图\": \"TEL\",\n      \"记录类型\": \"AAAA\",\n      \"DNS服务器\": \"202.195.*.*\"\n    },\n    {\n      \"时间\": \"2026-10-10 23:14:46\",\n      \"被查询域名\": \"***.edu.cn\",\n      \"来源IP\": \"181.192.*.*\",\n      \"来源端口\": \"43449\",\n      \"DNS视图\": \"TEL\",\n      \"记录类型\": \"NS\",\n      \"DNS服务器\": \"202.195.*.*\"\n    },\n    {\n      \"时间\": \"2026-10-10 23:14:46\",\n      \"被查询域名\": \"***.edu.cn\",\n      \"来源IP\": \"192.178.*.*\",\n      \"来源端口\": \"37584\",\n      \"DNS视图\": \"TEL\",\n      \"记录类型\": \"AAAA\",\n      \"DNS服务器\": \"202.195.*.*\"\n    },\n    {\n      \"时间\": \"2026-10-10 23:14:46\",\n      \"被查询域名\": \"***.edu.cn\",\n      \"来源IP\": \"3.101.*.*\",\n      \"来源端口\": \"44310\",\n      \"DNS视图\": \"TEL\",\n      \"记录类型\": \"AAAA\",\n      \"DNS服务器\": \"202.195.*.*\"\n    },\n    {\n      \"时间\": \"2026-10-10 23:14:46\",\n      \"被查询域名\": \"***.edu.cn\",\n      \"来源IP\": \"208.67.*.*\",\n      \"来源端口\": \"13566\",\n      \"DNS视图\": \"TEL\",\n      \"记录类型\": \"AAAA\",\n      \"DNS服务器\": \"202.195.*.*\"\n    },\n    {\n      \"时间\": \"2026-10-10 23:14:46\",\n      \"被查询域名\": \"***.edu.cn\",\n      \"来源IP\": \"181.192.*.*\",\n      \"来源端口\": \"30923\",\n      \"D"
+ },
+ {
+  "id": "L6",
+  "class": "logs",
+  "query": "Check wireless authentication for account 3240608029 in the last 7 days.",
+  "query_zh": "查学号 3240608029 最近 7 天的无线上网认证记录。",
+  "gold_tool": "query_wireless_auth_logs",
+  "gold_args": {
+   "account": "3240608029",
+   "begin_time": "2026-10-03",
+   "end_time": "2026-10-10"
+  },
+  "required_any": [
+   "认证",
+   "结果",
+   "total",
+   "无",
+   "没有"
+  ],
+  "_ref": "{\n  \"时间范围(北京时间)\": [\n    \"2026-10-03 00:00:00\",\n    \"2026-10-10 23:59:59\"\n  ],\n  \"total\": 6072,\n  \"page\": 1,\n  \"page_size\": 20,\n  \"results\": [\n    {\n      \"时间\": \"2026-10-10 23:12:16\",\n      \"账号\": \"***@***\",\n      \"事件\": \"DOT1X_WLAN_LOGIN_FAILURE\",\n      \"结果描述\": \"A user failed 802.1X authentication.Reason:AAA processed authentication request and return 26. Server reason Mac, IP, NASip, PORT err(29)!.\",\n      \"无线控制器\": \"172.20.*.*\",\n      \"AP\": \"D5-6F-609\",\n      \"SSID\": \"***\",\n      \"终端MAC\": \"327b-0af9-afcd\",\n      \"VLAN\": \"2381\"\n    },\n    {\n      \"时间\": \"2026-10-10 23:12:15\",\n      \"账号\": \"***@***\",\n      \"事件\": \"DOT1X_WLAN_LOGIN_FAILURE\",\n      \"结果描述\": \"A user failed 802.1X authentication.Reason:AAA processed authentication request and return 26. Server reason Mac, IP, NASip, PORT err(29)!.\",\n      \"无线控制器\": \"172.20.*.*\",\n      \"AP\": \"D5-6F-609\",\n      \"SSID\": \"***\",\n      \"终端MAC\": \"327b-0af9-afcd\",\n      \"VLAN\": \"2381\"\n    },\n    {\n      \"时间\": \"2026-10-10 23:12:14\",\n      \"账号\": \"***@***\",\n      \"事件\": \"DOT1X_WLAN_LOGIN_FAILURE\",\n      \"结果描述\": \"A user failed 802.1X authentication.Reason:AAA processed authentication request and return 26. Server reason Mac, IP, NASip, PORT err(29)!.\",\n      \"无线控制器\": \"172.20.*.*\",\n      \"AP\": \"D5-6F-609\",\n      \"SSID\": \"***\",\n      \"终端MAC\": \"327b-0af9-afcd\",\n      \"VLAN\": \"2381\"\n    },\n    {\n      \"时间\": \"2026-10-10 23:12:13\",\n      \"账号\": \"***@***\",\n      \"事件\": \"DOT1X_WLAN_LOGIN_FAILURE\",\n      \"结果描述\": \"A user failed 802.1X authentication.Reason:AAA processed authentication request and return 26. Server reason Mac, IP, NASip, PORT err(29)!.\",\n      \"无线控制器\": \"172.20.*.*\",\n      \"AP\": \"D5-6F-609\",\n      \"SSID\": \"***\",\n      \"终端MAC\": \"327b-0af9-afcd\",\n      \"VLAN\": \"2381\"\n    },\n    {\n      \"时间\": \"2026-10-10 23:12:12\",\n      \"账号\": \"***@***\",\n      \"事件\": \"DOT1X_WLAN_LOGIN_FAILURE\",\n      \"结果描述\": \"A user failed 802.1X authentication.Reason:Received dissociation packet with reason code 3 in Userauth state..\",\n      \"无线控制器\": \"172.20.*.*\",\n      \"AP\": \"D5-6F-609\",\n      \"SSID\": \"***\",\n      \"终端MAC\": \"327b-0af9-afcd\",\n      \"VLAN\": \"2381\"\n    },\n    {\n      \"时间\": \"2026-10-10 23:12:12\",\n      \"账号\": \"***@***\",\n      \"事件\": \"DOT1X_WLAN_LOGIN_FAILURE\",\n      \"结果描述\": \"A user failed 802.1X authentication.Reason:AAA processed authentication request and return 26. Server reason Mac, IP, NASip, PORT err(29)!.\",\n      \"无线控制器\": \"172.20.*.*\",\n      \"AP\": \"D5-6F-609\",\n      \"SSID\": \"***\",\n      \"终端MAC\": \"327b-0af9-afcd\",\n      \"VLAN\": \"2381\"\n    },\n    {\n      \"时间\": \"2026-10-10 23:12:05\",\n      \"账号\": \"***@***\",\n      \"事件\": \"DOT1X_WLAN_LOGOFF\",\n      \"结果描述\": \"Session for an 802.1X user was terminated.Reason:Session timed out for the 802.1X or MAC authentication client.\",\n      \"无线控制器\": \"172.20.*.*\",\n      \"AP\": \"D5-6F-609\",\n      \"SSID\": \"***\",\n      \"终端MAC\": \"327b-0af9-afcd\",\n      \"VLAN\": \"2902\"\n    },\n    {\n      \"时间\": \"2026-10-10 23:09:48\",\n      \"账号\": \"***@***\",\n      \"事件\": \"DOT1X_WLAN_LOGIN_FAILURE\",\n      \"结果描述\": \"A user failed 802.1X authentication.Reason:AAA processed authentication request and return 8.\",\n      \"无线控制器\": \"172.20.*.*\",\n      \"AP\": \"D5-6F-609\",\n      \"SSID\": \"***\",\n      \"终端MAC\": \"c2e7-d224-4390\",\n      \"VLAN\": \"2381\"\n    },\n    {\n      \"时间\": \"2026-10-10 23:08:15\",\n      \"账号\": \"***@***\",\n      \"事件\": \"DOT1X_WLAN_LOGIN_FAILURE\",\n      \"结果描述\": \"A user failed 802.1X authentication.Reason:AAA processed authentication request and return 26. Server reason Mac, IP, NASip, PORT err(29)!.\",\n      \"无线控制器\": \"172.20.*.*\",\n      \"AP\": \"D5-6F-609\",\n      \"SSID\": \"***\",\n      \"终端MAC\": \"c2e7-d224-4390\",\n      \"VLAN\": \"2381\"\n    },\n    {\n      \"时间\": \"2026-10-10 23:08:14\",\n      \"账号\": \"***@***\",\n      \"事件\": \"DOT1X_WLAN_LOGIN_FAILURE\",\n      \"结果描述\": \"A user failed 802.1X authentication.Reason:AAA processed authentication request and return 8.\",\n      \"无线控制器\": \"172.20.*.*\",\n      \"AP\": \"D5-6F-609\","
+ },
+ {
+  "id": "T1",
+  "class": "threat",
+  "query": "Is attacker IP 223.244.*.* currently blocked?",
+  "query_zh": "攻击 IP 223.244.*.* 现在被封了吗？",
+  "gold_tool": "query_black_ips",
+  "gold_args": {
+   "ip": "223.244.*.*"
+  },
+  "required_any": [
+   "封锁",
+   "已封",
+   "blocked"
+  ],
+  "_ref": "{\n  \"total\": 1,\n  \"page\": 1,\n  \"page_size\": 10,\n  \"results\": [\n    {\n      \"id\": \"72070000016189\",\n      \"ip\": \"223.244.*.*\",\n      \"状态\": \"封锁\",\n      \"来源\": \"中科大\",\n      \"封锁/解封时间\": \"2026-10-10 15:30:00.810263\",\n      \"IP信息\": \"\",\n      \"原因\": \"\"\n    }\n  ]\n}"
+ },
+ {
+  "id": "T2",
+  "class": "threat",
+  "query": "Is 223.254.*.* blocked? If it is covered by a range, say so explicitly.",
+  "query_zh": "223.254.*.* 被封了吗？如果是段覆盖要说明白。",
+  "gold_tool": "query_black_ips",
+  "gold_args": {
+   "ip": "223.254.*.*"
+  },
+  "required_all": [
+   "223.254.0.0/16"
+  ],
+  "required_any": [
+   "段",
+   "覆盖",
+   "CIDR",
+   "range"
+  ],
+  "_ref": "{\n  \"total\": 1,\n  \"page\": 1,\n  \"page_size\": 10,\n  \"results\": [\n    {\n      \"id\": \"72070000016190\",\n      \"ip\": \"223.254.0.0/16\",\n      \"状态\": \"封锁\",\n      \"来源\": \"中科大\",\n      \"封锁/解封时间\": \"2026-10-10 15:30:00.810277\",\n      \"IP信息\": \"\",\n      \"原因\": \"\"\n    }\n  ]\n}"
+ },
+ {
+  "id": "T3",
+  "class": "threat",
+  "query": "Any blocked malicious domains under timezoneapi.net, and are they synced to the DNS system?",
+  "query_zh": "timezoneapi.net 下有没有被封的恶意域名？同步到 DNS 了吗？",
+  "gold_tool": "query_black_dns",
+  "gold_args": {
+   "domain": "timezoneapi.net"
+  },
+  "required_all": [
+   "zzxiaoma.timezoneapi.net"
+  ],
+  "required_any": [
+   "已同步",
+   "未同步"
+  ],
+  "_ref": "{\n  \"total\": 23,\n  \"page\": 1,\n  \"page_size\": 10,\n  \"results\": [\n    {\n      \"id\": \"BLACK_DNS_*****\",\n      \"domain\": \"zzxiaoma.timezoneapi.net\",\n      \"同步状态\": \"已同步\",\n      \"封禁时间\": \"2026-10-10 17:00:07.107614\",\n      \"标志\": \"可同步\",\n      \"原因\": \"态势感知\"\n    },\n    {\n      \"id\": \"BLACK_DNS_*****\",\n      \"domain\": \"zzla113.timezoneapi.net\",\n      \"同步状态\": \"已同步\",\n      \"封禁时间\": \"2026-10-10 17:00:04.839119\",\n      \"标志\": \"可同步\",\n      \"原因\": \"态势感知\"\n    },\n    {\n      \"id\": \"BLACK_DNS_*****\",\n      \"domain\": \"fyyoyi.timezoneapi.net\",\n      \"同步状态\": \"已同步\",\n      \"封禁时间\": \"2026-10-10 16:56:56.239490\",\n      \"标志\": \"可同步\",\n      \"原因\": \"态势感知\"\n    },\n    {\n      \"id\": \"BLACK_DNS_*****\",\n      \"domain\": \"fybbei.timezoneapi.net\",\n      \"同步状态\": \"已同步\",\n      \"封禁时间\": \"2026-10-10 16:56:51.650253\",\n      \"标志\": \"可同步\",\n      \"原因\": \"态势感知\"\n    },\n    {\n      \"id\": \"BLACK_DNS_*****\",\n      \"domain\": \"fy9527.timezoneapi.net\",\n      \"同步状态\": \"已同步\",\n      \"封禁时间\": \"2026-10-10 16:56:49.226704\",\n      \"标志\": \"可同步\",\n      \"原因\": \"态势感知\"\n    },\n    {\n      \"id\": \"BLACK_DNS_*****\",\n      \"domain\": \"zzkkuuxin.timezoneapi.net\",\n      \"同步状态\": \"已同步\",\n      \"封禁时间\": \"2026-08-31 08:20:35.410400\",\n      \"标志\": \"可同步\",\n      \"原因\": \"态势感知\"\n    },\n    {\n      \"id\": \"BLACK_DNS_*****\",\n      \"domain\": \"zzkkuu.timezoneapi.net\",\n      \"同步状态\": \"已同步\",\n      \"封禁时间\": \"2026-08-31 08:20:33.118149\",\n      \"标志\": \"可同步\",\n      \"原因\": \"态势感知\"\n    },\n    {\n      \"id\": \"BLACK_DNS_*****\",\n      \"domain\": \"zzfage2.timezoneapi.net\",\n      \"同步状态\": \"已同步\",\n      \"封禁时间\": \"2026-08-31 08:20:30.757704\",\n      \"标志\": \"可同步\",\n      \"原因\": \"态势感知\"\n    },\n    {\n      \"id\": \"BLACK_DNS_*****\",\n      \"domain\": \"tl1.timezoneapi.net\",\n      \"同步状态\": \"已同步\",\n      \"封禁时间\": \"2026-08-31 08:19:49.541731\",\n      \"标志\": \"可同步\",\n      \"原因\": \"态势感知\"\n    },\n    {\n      \"id\": \"BLACK_DNS_*****\",\n      \"domain\": \"fyjding.timezoneapi.net\",\n      \"同步状态\": \"已同步\",\n      \"封禁时间\": \"2026-08-31 08:17:57.847554\",\n      \"标志\": \"可同步\",\n      \"原因\": \"态势感知\"\n    }\n  ]\n}"
+ },
+ {
+  "id": "T4",
+  "class": "threat",
+  "query": "Block attacker IPs 198.51.*.* and 223.244.*.*, reason: brute force. (evaluation: registration is simulated, never executed)",
+  "query_zh": "封禁攻击IP 198.51.*.* 和 223.244.*.*，原因：***。（评测态：登记模拟，不执行）",
+  "gold_tool": "add_black_ip",
+  "gold_args": {
+   "ips": [
+    "198.51.*.*",
+    "223.244.*.*"
+   ],
+   "reason": "***"
+  },
+  "required_any": [
+   "198.51.*.*",
+   "223.244.*.*",
+   "确认",
+   "核对",
+   "已存在",
+   "重复"
+  ],
+  "_ref": "SIMULATED (write tool, not executed)"
+ },
+ {
+  "id": "S1",
+  "class": "stats",
+  "query": "Give the institution-wide asset overview: number of secondary units and information-system count.",
+  "query_zh": "全校资产概览：二级单位数和信息系统总数。",
+  "gold_tool": "get_statistics_report",
+  "gold_args": {},
+  "required_any": [
+   "82",
+   "二级单位数"
+  ],
+  "note": "values re-frozen per experiment block",
+  "_ref": "{\n  \"统计时间\": \"2026-10-10 23:14:32.812293\",\n  \"二级单位数\": 82,\n  \"资产统计\": {\n    \"信息资产\": {\n      \"总数\": 759,\n      \"上线\": 463,\n      \"校外开放已开放\": 0,\n      \"状态分布\": {\n        \"上线\": 463,\n        \"下线\": 296\n      },\n      \"等保级别分布\": {\n        \"二级\": 411,\n        \"一级\": 286,\n        \"未定级\": 59,\n        \"未填写\": 1,\n        \"三级\": 2\n      }\n    },\n    \"硬件资产\": {\n      \"总数\": 894,\n      \"在用\": 549,\n      \"状态分布\": {\n        \"在用\": 549,\n        \"废弃\": 293,\n        \"关闭\": 52\n      },\n      \"类型分布\": {\n        \"机架服务器\": 213,\n        \"虚拟化服务器\": 563,\n        \"其他设备\": 10,\n        \"刀片服务器\": 9,\n        \"安全设备\": 22,\n        \"网络设备\": 49,\n        \"存储设备\": 18,\n        \"塔式服务器\": 6,\n        \"小型机\": 4\n      }\n    },\n    \"大屏资产\": {\n      \"总数\": 48,\n      \"状态分布\": {\n        \"在用\": 46,\n        \"废弃\": 2\n      }\n    },\n    \"移动应用\": {\n      \"总数\": 16,\n      \"状态分布\": {\n        \"上线\": 15,\n        \"下线\": 1\n      }\n    },\n    \"单位邮箱\": {\n      \"总数\": 442,\n      \"状态分布\": {\n        \"在用\": 336,\n        \"废弃\": 106\n      }\n    },\n    \"数据资产\": {\n      \"总数\": 16\n    }\n  },\n  \"通报整改\": {\n    \"总数\": 478,\n    \"今年\": 63,\n    \"未整改\": 10,\n    \"整改结果分布\": {\n      \"按时整改\": 431,\n      \"超时整改\": 37,\n      \"未整改\": 10\n    }\n  }\n}"
+ },
+ {
+  "id": "S2",
+  "class": "stats",
+  "query": "MLPS filing and assessment coverage for filed level-3 systems.",
+  "query_zh": "已备案三级系统的等保备案和测评情况。",
+  "gold_tool": "get_protection_report",
+  "gold_args": {
+   "level": "三级"
+  },
+  "required_any": [
+   "100.0%",
+   "备案证总数"
+  ],
+  "_ref": "{\n  \"统计范围\": \"等保二级/三级已备案在用系统(不含未定级/一级), 不与资产逐条关联\",\n  \"级别过滤\": \"三级\",\n  \"统计时间\": \"2026-10-10 23:14:32.869935\",\n  \"备案概况\": {\n    \"备案证总数\": 1,\n    \"级别分布\": {\n      \"三级\": 1\n    },\n    \"关键信息基础设施数\": 0\n  },\n  \"测评概况\": {\n    \"已录入测评的备案证数\": 1,\n    \"测评覆盖率\": \"100.0%\",\n    \"测评按报告年份分布\": {\n      \"2023\": 1,\n      \"2022\": 1,\n      \"2021\": 1\n    }\n  },\n  \"备案证清单(最多50条)\": [\n    {\n      \"编号\": \"440317-50004-00015\",\n      \"名称\": \"***\",\n      \"等保级别\": \"三级\",\n      \"备案日期\": \"2021-07-02\",\n      \"备案机构\": \"深圳市公安局\",\n      \"测评机构\": \"\",\n      \"是否关键信息基础设施\": \"否\",\n      \"备案得分\": \"\",\n      \"测评次数\": 3,\n      \"最新测评日期\": \"2023-09-12\",\n      \"最新测评单位\": \"***\",\n      \"最新综合得分\": \"0\",\n      \"最新结论摘要\": \"良\"\n    }\n  ],\n  \"清单是否截断\": \"否\"\n}"
+ },
+ {
+  "id": "S3",
+  "class": "stats",
+  "query": "Latest published department cybersecurity assessment: which year and how many departments were scored?",
+  "query_zh": "最近发布的部门网安考核：哪一年、评了多少部门？",
+  "gold_tool": "get_examine_report",
+  "gold_args": {},
+  "required_all": [
+   "2025",
+   "73"
+  ],
+  "_ref": "{\n  \"考核年份\": 2025,\n  \"考核名称\": \"2025“***”年度目标任务（网络安全部分考核）\",\n  \"发布状态\": \"已发布\",\n  \"满分口径\": {\n    \"教学/科研单位\": 3.5,\n    \"党政管理机构/教辅机构及其他单位\": 3.0\n  },\n  \"排名口径\": \"同部门类别内按实得分降序排名\",\n  \"参与部门数\": 73,\n  \"已评完部门数\": 73,\n  \"部门考核结果\": [\n    {\n      \"部门\": \"***\",\n      \"部门类别\": \"党政管理机构/教辅机构及其他单位\",\n      \"满分\": 3.0,\n      \"实得分\": 3.0,\n      \"是否评完\": \"是\",\n      \"未评分指标数\": 0,\n      \"主要扣分项(前3)\": [],\n      \"同类排名\": 1\n    },\n    {\n      \"部门\": \"***\",\n      \"部门类别\": \"党政管理机构/教辅机构及其他单位\",\n      \"满分\": 3.0,\n      \"实得分\": 3.0,\n      \"是否评完\": \"是\",\n      \"未评分指标数\": 0,\n      \"主要扣分项(前3)\": [],\n      \"同类排名\": 2\n    },\n    {\n      \"部门\": \"***\",\n      \"部门类别\": \"党政管理机构/教辅机构及其他单位\",\n      \"满分\": 3.0,\n      \"实得分\": 3.0,\n      \"是否评完\": \"是\",\n      \"未评分指标数\": 0,\n      \"主要扣分项(前3)\": [],\n      \"同类排名\": 3\n    },\n    {\n      \"部门\": \"出版社\",\n      \"部门类别\": \"党政管理机构/教辅机构及其他单位\",\n      \"满分\": 3.0,\n      \"实得分\": 3.0,\n      \"是否评完\": \"是\",\n      \"未评分指标数\": 0,\n      \"主要扣分项(前3)\": [],\n      \"同类排名\": 4\n    },\n    {\n      \"部门\": \"***（***）\",\n      \"部门类别\": \"党政管理机构/教辅机构及其他单位\",\n      \"满分\": 3.0,\n      \"实得分\": 3.0,\n      \"是否评完\": \"是\",\n      \"未评分指标数\": 0,\n      \"主要扣分项(前3)\": [],\n      \"同类排名\": 5\n    },\n    {\n      \"部门\": \"***\",\n      \"部门类别\": \"党政管理机构/教辅机构及其他单位\",\n      \"满分\": 3.0,\n      \"实得分\": 3.0,\n      \"是否评完\": \"是\",\n      \"未评分指标数\": 0,\n      \"主要扣分项(前3)\": [],\n      \"同类排名\": 6\n    },\n    {\n      \"部门\": \"***（***）\",\n      \"部门类别\": \"党政管理机构/教辅机构及其他单位\",\n      \"满分\": 3.0,\n      \"实得分\": 3.0,\n      \"是否评完\": \"是\",\n      \"未评分指标数\": 0,\n      \"主要扣分项(前3)\": [],\n      \"同类排名\": 7\n    },\n    {\n      \"部门\": \"***\",\n      \"部门类别\": \"党政管理机构/教辅机构及其他单位\",\n      \"满分\": 3.0,\n      \"实得分\": 3.0,\n      \"是否评完\": \"是\",\n      \"未评分指标数\": 0,\n      \"主要扣分项(前3)\": [],\n      \"同类排名\": 8\n    },\n    {\n      \"部门\": \"***\",\n      \"部门类别\": \"党政管理机构/教辅机构及其他单位\",\n      \"满分\": 3.0,\n      \"实得分\": 3.0,\n      \"是否评完\": \"是\",\n      \"未评分指标数\": 0,\n      \"主要扣分项(前3)\": [],\n      \"同类排名\": 9\n    },\n    {\n      \"部门\": \"***\",\n      \"部门类别\": \"党政管理机构/教辅机构及其他单位\",\n      \"满分\": 3.0,\n      \"实得分\": 3.0,\n      \"是否评完\": \"是\",\n      \"未评分指标数\": 0,\n      \"主要扣分项(前3)\": [],\n      \"同类排名\": 10\n    },\n    {\n      \"部门\": \"***\",\n      \"部门类别\": \"党政管理机构/教辅机构及其他单位\",\n      \"满分\": 3.0,\n      \"实得分\": 3.0,\n      \"是否评完\": \"是\",\n      \"未评分指标数\": 0,\n      \"主要扣分项(前3)\": [],\n      \"同类排名\": 11\n    },\n    {\n      \"部门\": \"***\",\n      \"部门类别\": \"党政管理机构/教辅机构及其他单位\",\n      \"满分\": 3.0,\n      \"实得分\": 3.0,\n      \"是否评完\": \"是\",\n      \"未评分指标数\": 0,\n      \"主要扣分项(前3)\": [],\n      \"同类排名\": 12\n    },\n    {\n      \"部门\": \"***（***）\",\n      \"部门类别\": \"党政管理机构/教辅机构及其他单位\",\n      \"满分\": 3.0,\n      \"实得分\": 3.0,\n      \"是否评完\": \"是\",\n      \"未评分指标数\": 0,\n      \"主要扣分项(前3)\": [],\n      \"同类排名\": 13\n    },\n    {\n      \"部门\": \"***）\",\n      \"部门类别\": \"党政管理机构/教辅机构及其他单位\",\n      \"满分\": 3.0,\n      \"实得分\": 3.0,\n      \"是否评完\": \"是\",\n      \"未评分指标数\": 0,\n      \"主要扣分项(前3)\": [],\n      \"同类排名\": 14\n    },\n    {\n      \"部门\": \"******）机关\",\n      \"部门类别\": \"党政管理机构/教辅机构及其他单位\",\n      \"满分\": 3.0,\n      \"实得分\": 3.0,\n      \"是否评完\": \"是\",\n      \"未评分指标数\": 0,\n      \"主要扣分项(前3)\": [],\n      \"同类排名\": 15\n    },\n    {\n      \"部门\": \"***\",\n      \"部门类别\": \"党政管理机构/教辅机构及其他单位\",\n      \"满分\": 3.0,\n      \"实得分\": 3.0,\n      \"是否评完\": \"是\",\n      \"未评分指标数\": 0,\n      \"主要扣分项(前3)\": [],\n      \"同类排名\": 16\n    },\n    {\n      \"部门\": \"***\",\n      \"部门类别\": \"党政管理机构/教辅机构及其他单位\",\n      \"满分\": 3.0,\n      \"实得分\": 3.0,\n      \"是否评完\": \"是\",\n      \"未评分指标数\": 0,\n      \"主要扣分项(前3)\": [],\n      \"同类排名\": 17\n    },\n    {\n      \"部门\": \"***\",\n      \"部门类别\": \"党政管理机构/教辅机构及其他单位\",\n      \"满分\": 3.0,\n      \"实得分\": 3.0,\n      \"是否评完\": \"是\",\n      \"未评分指标数\": 0,\n      \"主要扣分项(前3)\": [],\n      \"同类排名\": 18\n    },\n    {\n      \"部门\": \"智能农机装备理论与技术重点实验室\",\n      \"部门类别\": \"党政管理机构/教辅机构及其他单位\",\n      \"满分\": 3.0,\n      \"实得分\": 3.0,\n      \"是否评完\": \"是\",\n      \"未评分指标数\": 0,\n      \"主要扣分项(前3)\": [],\n      \"同类排名\": 19\n    },\n    {\n      \"部门\": \"***（***）\",\n      \"部门类别\": \"党政管理机构/教辅机构及其他单位\",\n      \"满分\": 3.0,\n      \"实得分\": 3.0,\n      \"是否评完\": \"是\",\n      \"未评分指标数\": 0,\n      \"主要扣分项(前3)\": [],\n      \"同类排名\": 20\n    },\n    {\n      \"部门\": \"***\",\n      \"部门类别\": \"党政管理机构/教辅机构及其他单位\",\n      \"满分\": 3.0,\n      \"实得分\": 3.0,\n      \"是否评"
+ },
+ {
+  "id": "S4",
+  "class": "stats",
+  "query": "Per-unit statistics summary for units matching ***.",
+  "query_zh": "带“***”的单位的统计汇总。",
+  "gold_tool": "get_department_statistics_report",
+  "gold_args": {
+   "keyword": "***"
+  },
+  "required_any": [
+   "***",
+   "资产"
+  ],
+  "_ref": "{\n  \"total\": 1,\n  \"page\": 1,\n  \"page_size\": 20,\n  \"order\": \"asset_total\",\n  \"results\": [\n    {\n      \"id\": 17,\n      \"name\": \"***\",\n      \"资产统计\": {\n        \"信息资产\": 3,\n        \"硬件资产\": 2,\n        \"大屏资产\": 1,\n        \"移动应用\": 0,\n        \"单位邮箱\": 6,\n        \"数据资产\": 0\n      },\n      \"资产合计\": 12,\n      \"今年通报数\": 0,\n      \"未整改通报数\": 0\n    }\n  ]\n}"
+ },
+ {
+  "id": "P1",
+  "class": "projects",
+  "query": "Which maintenance projects are still under warranty? Name one with its vendor.",
+  "query_zh": "现在还有哪些维保在保？说一个项目和厂商。",
+  "gold_tool": "search_projects",
+  "gold_args": {
+   "warranty_status": "在保"
+  },
+  "required_any": [
+   "2026年网络安全服务",
+   "中电鸿信",
+   "在保"
+  ],
+  "_ref": "{\n  \"total\": 14,\n  \"page\": 1,\n  \"page_size\": 10,\n  \"结果说明\": \"付款数字由分期现算; 完整分期与关联资产请用 get_project_detail(项目ID)\",\n  \"results\": [\n    {\n      \"id\": \"PM_MAINTAIN_*****\",\n      \"项目名称\": \"2026年网络安全服务\",\n      \"建设单位\": \"***\",\n      \"生产厂商\": \"***\",\n      \"供应商\": \"\",\n      \"合同日期\": \"2026-06-18\",\n      \"合同金额\": 14.5,\n      \"维保结束\": \"2027-09-01\",\n      \"维保状态\": \"在保\",\n      \"经费用途\": \"\",\n      \"已付合计\": 0.0,\n      \"未付\": 14.5,\n      \"付款状态\": \"未付款\"\n    },\n    {\n      \"id\": \"PM_MAINTAIN_*****\",\n      \"项目名称\": \"服务器维保服务\",\n      \"建设单位\": \"***\",\n      \"生产厂商\": \"\",\n      \"供应商\": \"PM_COMPANY_*****\",\n      \"合同日期\": \"2026-06-16\",\n      \"合同金额\": 8.96,\n      \"维保结束\": \"2027-06-16\",\n      \"维保状态\": \"在保\",\n      \"经费用途\": \"\",\n      \"已付合计\": 0.0,\n      \"未付\": 8.96,\n      \"付款状态\": \"未付款\"\n    },\n    {\n      \"id\": \"PM_MAINTAIN_*****\",\n      \"项目名称\": \"2026年网络安全等级保护测评及数据安全风险评估服务\",\n      \"建设单位\": \"***\",\n      \"生产厂商\": \"***\",\n      \"供应商\": \"\",\n      \"合同日期\": \"2026-06-16\",\n      \"合同金额\": 5.1,\n      \"维保结束\": \"2027-06-16\",\n      \"维保状态\": \"在保\",\n      \"经费用途\": \"\",\n      \"已付合计\": 0.0,\n      \"未付\": 5.1,\n      \"付款状态\": \"未付款\"\n    },\n    {\n      \"id\": \"PM_MAINTAIN_*****\",\n      \"项目名称\": \"2026年SSL数字证书安全服务\",\n      \"建设单位\": \"***\",\n      \"生产厂商\": \"******\",\n      \"供应商\": \"PM_COMPANY_*****\",\n      \"合同日期\": \"2026-03-09\",\n      \"合同金额\": 0.58,\n      \"维保结束\": \"2028-05-08\",\n      \"维保状态\": \"在保\",\n      \"经费用途\": \"\",\n      \"已付合计\": 0.58,\n      \"未付\": 0.0,\n      \"付款状态\": \"已付完\"\n    },\n    {\n      \"id\": \"PM_MAINTAIN_*****\",\n      \"项目名称\": \"数据中心设备（智算GPU）\",\n      \"建设单位\": \"***\",\n      \"生产厂商\": \"***\",\n      \"供应商\": \"PM_COMPANY_*****\",\n      \"合同日期\": \"2025-12-10\",\n      \"合同金额\": 292.6,\n      \"维保结束\": \"2030-12-19\",\n      \"维保状态\": \"在保\",\n      \"经费用途\": \"2025年设备更新项目(2025年)\",\n      \"已付合计\": 263.34,\n      \"未付\": 29.26,\n      \"付款状态\": \"部分付款\"\n    },\n    {\n      \"id\": \"PM_MAINTAIN_*****\",\n      \"项目名称\": \"2025年办公自动化系统维保续保\",\n      \"建设单位\": \"***\",\n      \"生产厂商\": \"***\",\n      \"供应商\": \"PM_COMPANY_*****\",\n      \"合同日期\": \"2025-06-19\",\n      \"合同金额\": 6.0,\n      \"维保结束\": \"2028-07-14\",\n      \"维保状态\": \"在保\",\n      \"经费用途\": \"\",\n      \"已付合计\": 2.0,\n      \"未付\": 4.0,\n      \"付款状态\": \"部分付款\"\n    },\n    {\n      \"id\": \"PM_MAINTAIN_*****\",\n      \"项目名称\": \"2025年齐治运维堡垒机续保\",\n      \"建设单位\": \"***\",\n      \"生产厂商\": \"***\",\n      \"供应商\": \"\",\n      \"合同日期\": \"2025-05-07\",\n      \"合同金额\": 4.0,\n      \"维保结束\": \"2027-06-01\",\n      \"维保状态\": \"在保\",\n      \"经费用途\": \"\",\n      \"已付合计\": 2.0,\n      \"未付\": 2.0,\n      \"付款状态\": \"部分付款\"\n    },\n    {\n      \"id\": \"PM_MAINTAIN_*****\",\n      \"项目名称\": \"网站群和教师个人主页维保服务\",\n      \"建设单位\": \"***\",\n      \"生产厂商\": \"***\",\n      \"供应商\": \"PM_COMPANY_*****\",\n      \"合同日期\": \"2025-03-31\",\n      \"合同金额\": 9.92,\n      \"维保结束\": \"2027-05-17\",\n      \"维保状态\": \"在保\",\n      \"经费用途\": \"\",\n      \"已付合计\": 0.0,\n      \"未付\": 9.92,\n      \"付款状态\": \"未付款\"\n    },\n    {\n      \"id\": \"PM_MAINTAIN_*****\",\n      \"项目名称\": \"***\",\n      \"建设单位\": \"***\",\n      \"生产厂商\": \"***\",\n      \"供应商\": \"PM_COMPANY_*****\",\n      \"合同日期\": \"2024-10-08\",\n      \"合同金额\": 19.8,\n      \"维保结束\": \"2027-12-05\",\n      \"维保状态\": \"在保\",\n      \"经费用途\": \"\",\n      \"已付合计\": 17.82,\n      \"未付\": 1.98,\n      \"付款状态\": \"部分付款\"\n    },\n    {\n      \"id\": \"PM_MAINTAIN_*****\",\n      \"项目名称\": \"数据中心主存储设备\",\n      \"建设单位\": \"***\",\n      \"生产厂商\": \"***\",\n      \"供应商\": \"PM_COMPANY_*****\",\n      \"合同日期\": \"2023-08-23\",\n      \"合同金额\": 44.9,\n      \"维保结束\": \"2030-11-30\",\n      \"维保状态\": \"在保\",\n      \"经费用途\": \"农行经费(2018年)\",\n      \"已付合计\": 43.55,\n      \"未付\": 1.35,\n      \"付款状态\": \"部分付款\"\n    }\n  ]\n}"
+ },
+ {
+  "id": "P2",
+  "class": "projects",
+  "query": "Details of project PM_MAINTAIN_*****: vendor, contract amount, paid amount.",
+  "query_zh": "PM_MAINTAIN_***** 项目详情：厂商、合同金额、已付。",
+  "gold_tool": "get_project_detail",
+  "gold_args": {
+   "project_id": "PM_MAINTAIN_*****"
+  },
+  "required_all": [
+   "中电鸿信",
+   "14.5"
+  ],
+  "required_any": [
+   "已付",
+   "付款",
+   "分期"
+  ],
+  "_ref": "{\n  \"基本信息\": {\n    \"id\": \"PM_MAINTAIN_*****\",\n    \"项目名称\": \"2026年网络安全服务\",\n    \"建设单位\": \"***\",\n    \"生产厂商\": \"***\",\n    \"供应商\": \"\",\n    \"维保期(年)\": 1,\n    \"维保开始\": \"2026-09-01\",\n    \"维保结束\": \"2027-09-01\",\n    \"维保状态\": \"在保\",\n    \"合同日期\": \"2026-06-18\",\n    \"验收日期\": null,\n    \"立项日期\": null,\n    \"备注\": \"\"\n  },\n  \"经费来源\": null,\n  \"付款信息\": {\n    \"合同金额\": 14.5,\n    \"已付合计\": 0.0,\n    \"未付\": 14.5,\n    \"付款状态\": \"未付款\",\n    \"分期数\": 0,\n    \"说明\": \"已付/未付由分期累加现算(平台无独立已付字段)\",\n    \"分期明细\": []\n  },\n  \"关联信息资产\": {\n    \"总数\": 0,\n    \"明细(前20)\": []\n  },\n  \"关联硬件资产\": {\n    \"总数\": 0,\n    \"明细(前20)\": []\n  },\n  \"厂商联系人\": []\n}"
+ },
+ {
+  "id": "X1",
+  "class": "cross",
+  "query": "What system is deployed at 202.195.*.*, who administers it, and does it have any unrectified bulletin?",
+  "query_zh": "202.195.*.* 部署了什么系统，谁管，有没有未整改通报？",
+  "gold_tool": "search_assets",
+  "gold_args": {
+   "keyword": "202.195.*.*",
+   "field": "ip"
+  },
+  "required_all": [
+   "***"
+  ],
+  "required_any": [
+   "***",
+   "***",
+   "整改"
+  ],
+  "_ref": "{\n  \"keyword\": \"202.195.*.*\",\n  \"field\": \"ip\",\n  \"status\": null,\n  \"信息资产\": {\n    \"total\": 1,\n    \"page\": 1,\n    \"page_size\": 10,\n    \"results\": [\n      {\n        \"id\": \"INFO_*****\",\n        \"name\": \"***（论文）***\",\n        \"typo\": \"信息系统\",\n        \"department\": \"***\",\n        \"administrator\": \"***\",\n        \"ip\": \"202.195.*.*\",\n        \"domainname\": \"***.edu.cn\",\n        \"url\": \"http://***.edu.cn\",\n        \"status\": \"上线\",\n        \"out_is_allow\": \"否\",\n        \"protection_level\": \"二级\",\n        \"is_report\": \"已上报\",\n        \"is_available\": \"可用\",\n        \"域名解析情况\": {\n          \"***.edu.cn\": [\n            {\n              \"视图\": \"CMCC\",\n              \"解析\": \"CNAME记录：***.edu.cn.\"\n            },\n            {\n              \"视图\": \"EDU\",\n              \"解析\": \"CNAME记录：***.edu.cn.\"\n            },\n            {\n              \"视图\": \"LAN\",\n              \"解析\": \"CNAME记录：***.edu.cn.\"\n            },\n            {\n              \"视图\": \"TEL\",\n              \"解析\": \"CNAME记录：***.edu.cn.\"\n            }\n          ]\n        }\n      }\n    ]\n  },\n  \"硬件资产\": {\n    \"total\": 1,\n    \"page\": 1,\n    \"page_size\": 10,\n    \"results\": [\n      {\n        \"id\": \"HD_*****\",\n        \"name\": \"*** 毕设系统\",\n        \"no\": null,\n        \"typo\": \"机架服务器\",\n        \"model\": \"DELL PowerEdge R430\",\n        \"status\": \"在用\",\n        \"department\": \"***\",\n        \"administrator\": \"***\",\n        \"hostname\": \"\",\n        \"ip_list\": [\n          \"202.195.*.*\"\n        ],\n        \"is_available\": \"未知\"\n      }\n    ]\n  }\n}"
+ }
+]

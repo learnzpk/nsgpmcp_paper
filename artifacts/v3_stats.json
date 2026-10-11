@@ -1,0 +1,454 @@
+{
+ "n_tasks": 253,
+ "tasklevel_mcnemar": {
+  "ts_both": {
+   "b_abl_better": 4,
+   "c_full_better": 6,
+   "p": 0.75390625
+  },
+  "ts_any": {
+   "b_abl_better": 0,
+   "c_full_better": 1,
+   "p": 1.0
+  },
+  "tsa_both": {
+   "b_abl_better": 3,
+   "c_full_better": 2,
+   "p": 1.0
+  },
+  "tsap_both": {
+   "b_abl_better": 1,
+   "c_full_better": 2,
+   "p": 1.0
+  }
+ },
+ "passlevel_mcnemar": {
+  "ts2": {
+   "b": 5,
+   "c": 8,
+   "p": 0.5810546875
+  },
+  "tsa": {
+   "b": 5,
+   "c": 2,
+   "p": 0.453125
+  },
+  "tsap": {
+   "b": 2,
+   "c": 2,
+   "p": 1.0
+  }
+ },
+ "cluster_boot": {
+  "ts_mean": {
+   "delta": 0.0059,
+   "ci95": [
+    -0.0079,
+    0.0198
+   ]
+  },
+  "tsa_mean": {
+   "delta": -0.0059,
+   "ci95": [
+    -0.0178,
+    0.004
+   ]
+  },
+  "tsap_mean": {
+   "delta": 0.0,
+   "ci95": [
+    -0.0099,
+    0.0079
+   ]
+  },
+  "af1_mean": {
+   "delta": 0.001,
+   "ci95": [
+    -0.0109,
+    0.0128
+   ]
+  },
+  "af1s_mean": {
+   "delta": 0.0064,
+   "ci95": [
+    -0.0049,
+    0.0181
+   ]
+  }
+ },
+ "tasklevel_mde": {
+  "ts_both_discordant": 10,
+  "theta_for_80pct_power": null,
+  "MDE_pp": null
+ },
+ "per_class": {
+  "asset": {
+   "n": 92,
+   "full": 100.0,
+   "full_ci95": [
+    96.0,
+    100
+   ],
+   "ablated": 97.8,
+   "ablated_ci95": [
+    92.4,
+    99.4
+   ]
+  },
+  "cross": {
+   "n": 15,
+   "full": 86.7,
+   "full_ci95": [
+    62.1,
+    96.3
+   ],
+   "ablated": 80.0,
+   "ablated_ci95": [
+    54.8,
+    93.0
+   ]
+  },
+  "disp": {
+   "n": 38,
+   "full": 97.4,
+   "full_ci95": [
+    86.5,
+    99.5
+   ],
+   "ablated": 100.0,
+   "ablated_ci95": [
+    90.8,
+    100.0
+   ]
+  },
+  "logs": {
+   "n": 51,
+   "full": 94.1,
+   "full_ci95": [
+    84.1,
+    98.0
+   ],
+   "ablated": 94.1,
+   "ablated_ci95": [
+    84.1,
+    98.0
+   ]
+  },
+  "org": {
+   "n": 24,
+   "full": 100.0,
+   "full_ci95": [
+    86.2,
+    100
+   ],
+   "ablated": 100.0,
+   "ablated_ci95": [
+    86.2,
+    100
+   ]
+  },
+  "proj": {
+   "n": 10,
+   "full": 100.0,
+   "full_ci95": [
+    72.2,
+    100
+   ],
+   "ablated": 100.0,
+   "ablated_ci95": [
+    72.2,
+    100
+   ]
+  },
+  "stats": {
+   "n": 23,
+   "full": 100.0,
+   "full_ci95": [
+    85.7,
+    100
+   ],
+   "ablated": 100.0,
+   "ablated_ci95": [
+    85.7,
+    100
+   ]
+  }
+ },
+ "ops": {
+  "full_p1": {
+   "tool_calls": 703,
+   "calls_median": 1,
+   "err_calls": 8,
+   "err_rate": 0.0114,
+   "retry_calls": 0,
+   "capped_tasks": 29,
+   "capped_fail": 3,
+   "capped_fail_tasks": [
+    "L152",
+    "X247",
+    "X249"
+   ],
+   "srv_ms_sum_s": 120.6,
+   "srv_p50": 59,
+   "srv_p95": 803,
+   "srv_max": 6616,
+   "e2e_med": 2947,
+   "e2e_p95": 20155,
+   "srv_share_pct": 9.0
+  },
+  "ablated_p1": {
+   "tool_calls": 655,
+   "calls_median": 1,
+   "err_calls": 11,
+   "err_rate": 0.0168,
+   "retry_calls": 0,
+   "capped_tasks": 23,
+   "capped_fail": 3,
+   "capped_fail_tasks": [
+    "L147",
+    "L156",
+    "X249"
+   ],
+   "srv_ms_sum_s": 102.3,
+   "srv_p50": 55,
+   "srv_p95": 215,
+   "srv_max": 20045,
+   "e2e_med": 2646,
+   "e2e_p95": 19378,
+   "srv_share_pct": 8.6
+  }
+ },
+ "model_turns_full_p1_est": 745,
+ "drift_changed_tasks": [
+  "S206",
+  "S207",
+  "S208",
+  "S219",
+  "S220",
+  "S222"
+ ],
+ "failures_full": [
+  {
+   "id": "L152",
+   "class": "logs",
+   "gold": "query_web_access_logs",
+   "first": "query_web_access_logs",
+   "fail_p1": true,
+   "fail_p2": false,
+   "cause": [
+    "six-step cap"
+   ],
+   "drifted": false
+  },
+  {
+   "id": "L154",
+   "class": "logs",
+   "gold": "query_web_access_logs",
+   "first": "query_web_access_logs",
+   "fail_p1": false,
+   "fail_p2": true,
+   "cause": [
+    "six-step cap"
+   ],
+   "drifted": false
+  },
+  {
+   "id": "L155",
+   "class": "logs",
+   "gold": "query_web_access_logs",
+   "first": "query_web_access_logs",
+   "fail_p1": false,
+   "fail_p2": true,
+   "cause": [
+    "six-step cap"
+   ],
+   "drifted": false
+  },
+  {
+   "id": "T183",
+   "class": "disp",
+   "gold": "query_black_ips",
+   "first": "query_black_ips",
+   "fail_p1": false,
+   "fail_p2": true,
+   "cause": [
+    "content mis-relay"
+   ],
+   "drifted": false
+  },
+  {
+   "id": "X247",
+   "class": "cross",
+   "gold": "search_assets",
+   "first": "search_assets",
+   "fail_p1": true,
+   "fail_p2": false,
+   "cause": [
+    "hosting-only relay at shared address",
+    "six-step cap"
+   ],
+   "drifted": false
+  },
+  {
+   "id": "X249",
+   "class": "cross",
+   "gold": "search_assets",
+   "first": "search_assets",
+   "fail_p1": true,
+   "fail_p2": true,
+   "cause": [
+    "hosting-only relay at shared address",
+    "six-step cap"
+   ],
+   "drifted": false
+  }
+ ],
+ "failures_ablated": [
+  {
+   "id": "A26",
+   "class": "asset",
+   "gold": "get_asset_detail",
+   "first": "get_asset_detail",
+   "fail_p1": false,
+   "fail_p2": true,
+   "cause": [
+    "content mis-relay"
+   ],
+   "drifted": false
+  },
+  {
+   "id": "A69",
+   "class": "asset",
+   "gold": "query_department_assets",
+   "first": "query_department_assets",
+   "fail_p1": true,
+   "fail_p2": false,
+   "cause": [
+    "content mis-relay"
+   ],
+   "drifted": false
+  },
+  {
+   "id": "L147",
+   "class": "logs",
+   "gold": "query_web_access_logs",
+   "first": "query_web_access_logs",
+   "fail_p1": true,
+   "fail_p2": false,
+   "cause": [
+    "six-step cap"
+   ],
+   "drifted": false
+  },
+  {
+   "id": "L150",
+   "class": "logs",
+   "gold": "query_web_access_logs",
+   "first": "query_web_access_logs",
+   "fail_p1": false,
+   "fail_p2": true,
+   "cause": [
+    "log-store error/timeout",
+    "six-step cap"
+   ],
+   "drifted": false
+  },
+  {
+   "id": "L156",
+   "class": "logs",
+   "gold": "query_web_access_logs",
+   "first": "query_web_access_logs",
+   "fail_p1": true,
+   "fail_p2": true,
+   "cause": [
+    "six-step cap"
+   ],
+   "drifted": false
+  },
+  {
+   "id": "X246",
+   "class": "cross",
+   "gold": "search_assets",
+   "first": "search_assets",
+   "fail_p1": false,
+   "fail_p2": true,
+   "cause": [
+    "hosting-only relay at shared address"
+   ],
+   "drifted": false
+  },
+  {
+   "id": "X247",
+   "class": "cross",
+   "gold": "search_assets",
+   "first": "search_assets",
+   "fail_p1": false,
+   "fail_p2": true,
+   "cause": [
+    "hosting-only relay at shared address"
+   ],
+   "drifted": false
+  },
+  {
+   "id": "X249",
+   "class": "cross",
+   "gold": "search_assets",
+   "first": "search_assets",
+   "fail_p1": true,
+   "fail_p2": true,
+   "cause": [
+    "hosting-only relay at shared address",
+    "six-step cap"
+   ],
+   "drifted": false
+  }
+ ],
+ "grounded_bare": {
+  "pass1": {
+   "token_match_successes": 103,
+   "no_discriminating_tokens": 21,
+   "loose_groundled": 1,
+   "loose_tasks": [
+    "O101"
+   ],
+   "derivable_only": [
+    "O101"
+   ],
+   "strict_groundled": 0,
+   "strict_tasks": []
+  },
+  "pass2": {
+   "token_match_successes": 106,
+   "no_discriminating_tokens": 25,
+   "loose_groundled": 0,
+   "loose_tasks": [],
+   "derivable_only": [],
+   "strict_groundled": 0,
+   "strict_tasks": []
+  }
+ },
+ "arm_tsa": {
+  "full": {
+   "tsa": 97.6,
+   "tsap": 99.6,
+   "af1": 0.9,
+   "af1s": 0.915
+  },
+  "ablated": {
+   "tsa": 98.2,
+   "tsap": 99.6,
+   "af1": 0.899,
+   "af1s": 0.909
+  }
+ },
+ "tsap_miss_full_p1": [
+  "T202"
+ ],
+ "tsap_miss_abl_p1": [],
+ "headline_tasklevel": {
+  "full": 97.6,
+  "ablated": 96.8,
+  "full_any": 99.6,
+  "ablated_any": 99.2
+ }
+}
